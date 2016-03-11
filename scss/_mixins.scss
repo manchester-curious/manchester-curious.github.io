@@ -1,0 +1,4 @@
+@mixin button-grey {
+	@include button-base();
+	@include button-style($medium-gray, lighten($medium-gray, 10%), $white);
+}
