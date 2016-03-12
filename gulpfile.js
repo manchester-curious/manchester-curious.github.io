@@ -6,6 +6,11 @@ var sassPaths = [
   'bower_components/foundation-sites/scss',
   'bower_components/motion-ui/src'
 ];
+var jsPaths = [
+  'bower_components/foundation-sites/js/foundation.core.js',
+  'bower_components/foundation-sites/js/foundation.util.mediaQuery.js',
+  'bower_components/foundation-sites/js/foundation.offcanvas.js'
+];
 
 gulp.task('sass', function() {
   return gulp.src('scss/app.scss')
@@ -20,6 +25,15 @@ gulp.task('sass', function() {
     .pipe($.sourcemaps.write())
     .pipe(gulp.dest('css'));
 });
+
+gulp.task("js", function () {
+  return gulp.src(jsPaths)
+    .pipe(sourcemaps.init())
+    .pipe(babel())
+    .pipe(sourcemaps.write("."))
+    .pipe(gulp.dest("js"));
+});
+
 
 gulp.task('serve', function() {
     browserSync.init(['css/*.css', 'js/*.js','./**/*.php'],{

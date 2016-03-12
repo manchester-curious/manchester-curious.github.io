@@ -1,16 +1,49 @@
 header {
 
 	@include grid-row;
-
+	@include grid-col-size;
 	.logo {
-		text-align: center;
+
+		a {
+			text-indent: -3333px;
+		}
 	}
+	@include breakpoint(large up) {
+    	.logo {
+			width: 176px;
+			height: 80px;
+			background: url(../img/logo@2x.gif) no-repeat;
+			background-size: 170px 80px;
+			margin: 0 auto;
+			a {
+				width: 176px;
+				height: 80px;
+				display: block;
+			}
+  		}
+  	}
 
 	nav {
 		text-align: center;
 		background-color: #e2e2e2;
+
 			.main-nav  {
 				@include menu-simple;
+				text-transform: uppercase;
+				font-family: $header-font-family;
+			}
+
+			@include breakpoint(large only) {
+				.main-nav  {
+					font-size: rem-calc(13);
+					text-transform: uppercase;
+				}
+			}
+			@include breakpoint(xlarge up) {
+				.main-nav  {
+					font-size: rem-calc(15);
+					text-transform: uppercase;
+				}
 			}
 	}
 	
