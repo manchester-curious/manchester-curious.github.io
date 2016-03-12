@@ -6,7 +6,7 @@ var sassPaths = [
   'bower_components/foundation-sites/scss',
   'bower_components/motion-ui/src'
 ];
-var jsPaths = [
+var jsBabelPaths = [
   'bower_components/foundation-sites/js/foundation.core.js',
   'bower_components/foundation-sites/js/foundation.util.mediaQuery.js',
   'bower_components/foundation-sites/js/foundation.offcanvas.js'
@@ -26,11 +26,9 @@ gulp.task('sass', function() {
     .pipe(gulp.dest('css'));
 });
 
-gulp.task("js", function () {
-  return gulp.src(jsPaths)
-    .pipe(sourcemaps.init())
-    .pipe(babel())
-    .pipe(sourcemaps.write("."))
+gulp.task("babel", function () {
+  return gulp.src(jsBabelPaths)
+    .pipe($.babel())
     .pipe(gulp.dest("js"));
 });
 
