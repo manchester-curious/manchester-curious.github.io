@@ -1,0 +1,35 @@
+.footer-partners-bg {
+	background-color: $white;
+
+	.footer-partners-outer {
+		@include grid-row;
+		padding: 50px 0 60px 0;
+
+		.footer-partners-inner {
+			@include grid-column;
+
+			.logos-container {
+				text-align: center;
+				margin-top: rem-calc(25);
+
+				.logos {
+					@include menu-simple;
+				}
+
+			}
+
+		}
+
+	}
+}
+
+footer {
+	background-color: red;
+
+	.footer-inner {
+		@include grid-row;
+		background-color: red;
+	}
+}
+
+

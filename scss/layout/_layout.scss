@@ -1,0 +1,13 @@
+.container {
+	@include grid-row;
+}
+.column-half {
+	@include grid-column(6);
+	background-color: blue
+}
+.column-third {
+	@include grid-column(4);
+}
+.column-two-third {
+	@include grid-column(8);
+}

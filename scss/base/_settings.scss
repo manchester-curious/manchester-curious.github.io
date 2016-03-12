@@ -57,7 +57,7 @@ $light-gray: #e6e6e6;
 $medium-gray: #cacaca;
 $dark-gray: #4b4b4b;
 $black: #0a0a0a;
-$white: #fefefe;
+$white: #fff;
 $body-background: $white;
 $body-font-color: $black;
 $body-font-color: $dark-gray;
@@ -118,6 +118,14 @@ $header-sizes: (
     'h5': 20,
     'h6': 16,
   ),
+  large: (
+    'h1': 48,
+    'h2': 26,
+    'h3': 31,
+    'h4': 25,
+    'h5': 20,
+    'h6': 16,
+  ),  
 );
 $header-color: inherit;
 $header-lineheight: 1.4;
