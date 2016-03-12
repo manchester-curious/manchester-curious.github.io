@@ -11,6 +11,26 @@
       <?php include ('partials/header.php'); ?>
 
 
+
+      <div class="promo-box-bg">
+         
+      </div>
+
+      <div class="promo-box-bg">
+         <div class="row">
+            <div class="medium-4 column">
+               <div class="promo-box">
+                  <h4>Title of Box</h4>
+               </div>
+            </div>
+            <div class="medium-4 column">
+               dsfsdfggf
+            </div>
+            <div class="medium-4 column">
+               dsfsdfggf
+            </div>
+         </div>
+      </div>
       <?php include ('partials/footer.php'); ?> 
       <?php include ('partials/js.php'); ?>  
    </body>

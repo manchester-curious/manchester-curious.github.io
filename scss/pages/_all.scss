@@ -1,3 +1,7 @@
 body {
 	background-color: $light-beige;
 }
+
+a.button-expanded {
+	@include button-expanded;
+}

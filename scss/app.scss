@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Montserrat|Merriweather);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans|Montserrat|Domine);
 
 @charset 'utf-8';
 
@@ -6,8 +6,7 @@
 @import 'foundation';
 @import 'motion-ui';
 
-@import 'helpers/variables';
-@import 'helpers/mixins';
+
 
 @include foundation-everything;
 
@@ -56,6 +55,8 @@
 // @include motion-ui-transitions;
 // @include motion-ui-animations;
 
+@import 'helpers/variables';
+@import 'helpers/buttons';
 @import 'base/typography';
 @import 'grid/layout';
 @import 'pages/all';

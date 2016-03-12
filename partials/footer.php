@@ -16,26 +16,27 @@
 
          
          <footer>
-            <div class="footer-inner">
-               asdadasad
+            <div class="footer-outer">
+               <div class="footer-inner">
+                  <div class="left-col">
+                     <h5>Navigate</h5>
+                        <ul class="menu-footer">
+                           <?php include ('partials/nav-links.php'); ?> 
+                       </ul>
+                  </div>
+                  <div class="mid-col">
+                     <h5>Stay in The Loop</h5>
+                     MAILCHIMP CODE GOES HERE
+                  </div>
+                  <div class="right-col">
+                     <h5>Download Map</h5>
+                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam ab eaque, illum tempora mollitia magni omnis. Praesentium</p>
+                     <a href="#" class="button-expanded">Get E-Map</a>
+                  </div>                  
+               </div>
             </div>
          </footer>
 
-         <footer>
-            <div class="row">
-               <div class="small-12 columns">sdsdsadffsdf</div>
-            </div>
-         </footer>
-
-         <footer class="row">
-            <div class="small-12 columns">sdsdsadffsdf</div>
-         </footer>
-
-         <footer>
-            <div class="row columns">
-               <div class="small-12">sdsdsadffsdf</div>
-            </div>
-         </footer>
       </div> <!--/.off-canvas-content-->
    </div> <!--/.off-canvas-wrapper-->
 </div> <!--/.off-canvas-wrapper-inner-->
