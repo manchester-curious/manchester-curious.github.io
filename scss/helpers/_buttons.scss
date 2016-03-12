@@ -15,5 +15,8 @@
 	font-family: $footer-font-family;
 	font-size: rem-calc(13);
 	letter-spacing: rem-calc(1); 
+}
 
+a.button-expanded {
+	@include button-expanded;
 }

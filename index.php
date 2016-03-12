@@ -18,10 +18,12 @@
 
       <div class="promo-box-bg">
          <div class="row">
-            <div class="medium-4 column">
-               <div class="promo-box">
-                  <h4>Title of Box</h4>
-               </div>
+            <div class="small-4 column">
+               <a href="#">
+                  <div class="promo-box">
+                     <h4>Title of Box</h4>
+                  </div>
+               </a>
             </div>
             <div class="medium-4 column">
                dsfsdfggf

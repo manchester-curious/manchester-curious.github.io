@@ -7,11 +7,11 @@
 @import 'motion-ui';
 
 
-
-@include foundation-everything;
+@import 'helpers/variables';
+//@include foundation-everything;
 
 @include foundation-global-styles;
-// @include foundation-grid;
+@include foundation-grid;
 // @include foundation-flex-grid;
 @include foundation-typography;
 // @include foundation-button;
@@ -55,11 +55,11 @@
 // @include motion-ui-transitions;
 // @include motion-ui-animations;
 
-@import 'helpers/variables';
-@import 'helpers/buttons';
 @import 'base/typography';
-@import 'grid/layout';
 @import 'pages/all';
+@import 'helpers/buttons';
+@import 'grid/layout';
+@import 'components/modules';
 @import 'layout/header';
 @import 'layout/footer';
 
