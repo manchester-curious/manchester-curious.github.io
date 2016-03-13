@@ -26,14 +26,14 @@ header {
 	}
 	@include breakpoint(large up) {
     	.logo {
-			width: 176px;
-			height: 80px;
+			width: rem-calc(176);
+			height: rem-calc(80);
 			background: url(../images/logo@2x.gif) no-repeat;
-			background-size: 170px 80px;
-			margin: 35px auto 35px auto;
+			background-size: rem-calc(170 80);
+			margin: rem-calc(35 auto 35 auto);
 			a {
-				width: 176px;
-				height: 80px;
+				width: rem-calc(176);
+				height: rem-calc(80);
 				display: block;
 			}
   		}
@@ -56,13 +56,12 @@ header {
 			@include breakpoint(large only) {
 				.main-nav  {
 					font-size: rem-calc(13);
-					text-transform: uppercase;
+					@include letter-transform(0);
 				}
 			}
 			@include breakpoint(xlarge up) {
 				.main-nav  {
 					font-size: rem-calc(15);
-					text-transform: uppercase;
 				}
 			}
 	}

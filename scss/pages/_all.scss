@@ -4,4 +4,7 @@
 .container {
 	@include grid-row;
 }
+img {
+	width: 100%;
+}
 

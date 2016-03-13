@@ -1,3 +1,15 @@
 .intro-text {
-	@include grid-col(12);
+	@include grid-col();
+	text-align: center;
+
+	@include breakpoint(medium) {
+		@include grid-col(10);
+		@include grid-column-offset(1);	
+	}
+}
+
+#owl-demo .item img{
+    display: block;
+    width: 100%;
+    height: auto;
 }

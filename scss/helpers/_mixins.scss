@@ -1,32 +1,34 @@
 @mixin button {
 	@include button-base();
 	@include button-style($primary-color, darken($primary-color, 10%), $white);
-	text-transform: uppercase;
-	font-family: $footer-font-family;
+	font-family: $secondary-body-font-family;
 	font-size: rem-calc(13);
-	letter-spacing: rem-calc(1); 
+	@include letter-transform();
 }
 
+@mixin letter-transform ($spacing: 1){
+	text-transform: uppercase;
+	letter-spacing: rem-calc($spacing);
+}
 @mixin button-expanded {
 	@include button-base();
 	@include button-expand();
 	@include button-style($primary-color, darken($primary-color, 10%), $white);
-	text-transform: uppercase;
-	font-family: $footer-font-family;
+	font-family: $secondary-body-font-family;
 	font-size: rem-calc(13);
-	letter-spacing: rem-calc(1); 
+	@include letter-transform(); 
 }
 
 @mixin promo-box-item ($image) {
-	height: 150px;
+	height: rem-calc(150);
 		@include breakpoint(medium) {
-			height: 120px;
+			height: rem-calc(120);
 		}
 		@include breakpoint(large) {
-			height: 170px;
+			height: rem-calc(170);
 		}
 		@include breakpoint(xlarge) {
-			height: 200px;
+			height: rem-calc(200);
 		}
 
 	float: left;
@@ -38,7 +40,7 @@
 	cursor: pointer;
 	text-align: center;
 
-	.img {
+	.image {
 		background-image: url($image);
 		background-position: center center;
 		background-repeat: no-repeat;
@@ -51,7 +53,7 @@
 		-webkit-backface-visibility: hidden;
 		transition: all 1s ease-in-out 0s;
 	}
-	&:hover .img{
+	&:hover .image {
 		transform: scale(1.1, 1.1);
 	}
 

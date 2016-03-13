@@ -12,7 +12,8 @@ var jsBabelPaths = [
   'bower_components/foundation-sites/js/foundation.util.mediaQuery.js',
   'bower_components/foundation-sites/js/foundation.util.triggers.js',
   'bower_components/foundation-sites/js/foundation.util.motion.js',  
-  'bower_components/foundation-sites/js/foundation.offcanvas.js'
+  'bower_components/foundation-sites/js/foundation.offcanvas.js',
+  'bower_components/foundation-sites/js/foundation.equalizer.js',
 ];
 
 

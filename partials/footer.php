@@ -1,7 +1,9 @@
          <div class="footer-partners-bg">
             <div class="footer-partners-outer">
                <div class="footer-partners-inner">
-                  <h2 class="text-center">Our Partners</h2>
+                  <div class="heading">
+                     <h2>Our Partners</h2>   
+                  </div>
                   <div class="logos-container">
                      <ul class="logos">
                         <li><img src="http://placehold.it/125x60" alt="Logo"></li>

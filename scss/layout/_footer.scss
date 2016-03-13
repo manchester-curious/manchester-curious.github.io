@@ -1,8 +1,8 @@
 footer {
 	border-top: 1px solid #ccc;
-	padding: 40px 0 0 0;
+	padding: rem-calc(40 0 0 0);
 	color: $medium-gray;
-	font-family: $footer-font-family;
+	font-family: $secondary-body-font-family;
 	font-size: rem-calc(14);
 	text-align: center;
 	background-color: white;
@@ -15,7 +15,7 @@ footer {
 		color: $medium-gray;
 	}
 	h5 {
-		margin-bottom: 10px;
+		margin-bottom: rem-calc(10);
 	}
 
 	.footer-outer {
@@ -27,7 +27,7 @@ footer {
 
 	.left-col {
 		@include grid-column;
-		margin-bottom: 35px;
+		margin-bottom: rem-calc(35);
 
 		@include breakpoint(medium) {
 			@include grid-column(4);
@@ -46,15 +46,15 @@ footer {
 			@include menu-direction(vertical);
 			margin-left: 0;
 			font-size: rem-calc(13);
-			text-transform: uppercase;
+			@include letter-transform(0);
 
 			li {
-				margin-bottom: 14px;
+				margin-bottom: rem-calc(14);
 			}
 
 			@include breakpoint(medium up) {
 				li {
-					margin-bottom: 8px;
+					margin-bottom: rem-calc(8);
 				}
 			}			
 		}
@@ -63,7 +63,7 @@ footer {
 	.mid-col,
 	.right-col {
 		@include grid-column;
-		margin-bottom: 35px;
+		margin-bottom: rem-calc(35);
 
 		@include breakpoint(medium) {
 			@include grid-column(4);
