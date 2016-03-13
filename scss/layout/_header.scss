@@ -1,3 +1,6 @@
+.header-bg {
+	background-color: $white;
+}
 .title-bar {
 	@include breakpoint(large up) {
 		display: none;
@@ -11,7 +14,7 @@
 
 header {
 	@include grid-row;
-
+	
 	@include breakpoint(medium down) {
 		display: none;
 	}

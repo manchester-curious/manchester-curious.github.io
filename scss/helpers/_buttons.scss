@@ -1,22 +1,3 @@
-@mixin button {
-	@include button-base();
-	@include button-style($primary-color, darken($primary-color, 10%), $white);
-	text-transform: uppercase;
-	font-family: $footer-font-family;
-	font-size: rem-calc(13);
-	letter-spacing: rem-calc(1); 
-}
-
-@mixin button-expanded {
-	@include button-base();
-	@include button-expand();
-	@include button-style($primary-color, darken($primary-color, 10%), $white);
-	text-transform: uppercase;
-	font-family: $footer-font-family;
-	font-size: rem-calc(13);
-	letter-spacing: rem-calc(1); 
-}
-
 a.button-expanded {
 	@include button-expanded;
 }

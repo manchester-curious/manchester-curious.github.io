@@ -1,3 +1,7 @@
-body {
+.off-canvas-content {
 	background-color: $light-beige;
 }
+.container {
+	@include grid-row;
+}
+

@@ -8,10 +8,12 @@
 
 
 @import 'helpers/variables';
-//@include foundation-everything;
+@import 'helpers/mixins';
+
+@include foundation-everything;
 
 @include foundation-global-styles;
-@include foundation-grid;
+//@include foundation-grid;
 // @include foundation-flex-grid;
 @include foundation-typography;
 // @include foundation-button;
@@ -48,7 +50,7 @@
 @include foundation-title-bar;
 // @include foundation-tooltip;
 // @include foundation-top-bar;
-// @include foundation-visibility-classes;
+@include foundation-visibility-classes; //remove this when finished
 // @include foundation-float-classes;
 // @include foundation-flex-classes;
 
@@ -57,9 +59,10 @@
 
 @import 'base/typography';
 @import 'pages/all';
+@import 'pages/index';
 @import 'helpers/buttons';
-@import 'grid/layout';
-@import 'components/modules';
+@import 'components/promo-box';
 @import 'layout/header';
+@import 'layout/footer-partners';
 @import 'layout/footer';
 

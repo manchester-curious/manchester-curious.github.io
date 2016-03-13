@@ -1,0 +1,30 @@
+.promo-box-bg {
+	background-color: $dark-beige;
+	padding: 70px 0;
+}
+.promo-box-container {
+	@include grid-row;
+
+	.promo-box-outer {
+		@include grid-column();
+		margin-bottom: rem-calc(15);
+
+		@include breakpoint(medium) {
+			@include grid-column(4);
+		}
+	}
+}
+
+.promo-get-involved {
+	@include promo-box-item ('../images/promo-get-involved.jpg');
+}
+.promo-event-planner {
+	@include promo-box-item ('../images/promo-event-planner.jpg');
+}
+.promo-programme {
+	@include promo-box-item ('../images/promo-programme.jpg');
+}
+.promo-buildings-tours {
+	@include promo-box-item ('../images/promo-buildings-tours.jpg');
+}
+

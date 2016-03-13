@@ -4,10 +4,10 @@
                   <h2 class="text-center">Our Partners</h2>
                   <div class="logos-container">
                      <ul class="logos">
+                        <li><img src="http://placehold.it/125x60" alt="Logo"></li>
                         <li><img src="http://placehold.it/125x80" alt="Logo"></li>
-                        <li><img src="http://placehold.it/125x80" alt="Logo"></li>
-                        <li><img src="http://placehold.it/125x80" alt="Logo"></li>
-                        <li><img src="http://placehold.it/125x80" alt="Logo"></li>
+                        <li><img src="http://placehold.it/125x95" alt="Logo"></li>
+                        <li><img src="http://placehold.it/125x40" alt="Logo"></li>
                      </ul>
                   </div>                  
                </div> <!--/.footer-partners-inner-->
@@ -21,7 +21,7 @@
                   <div class="left-col">
                      <h5>Navigate</h5>
                         <ul class="menu-footer">
-                           <?php include ('partials/nav-links.php'); ?> 
+                           <?php include('partials/nav-links.php'); ?> 
                        </ul>
                   </div>
                   <div class="mid-col">

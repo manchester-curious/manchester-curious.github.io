@@ -1,0 +1,87 @@
+@mixin button {
+	@include button-base();
+	@include button-style($primary-color, darken($primary-color, 10%), $white);
+	text-transform: uppercase;
+	font-family: $footer-font-family;
+	font-size: rem-calc(13);
+	letter-spacing: rem-calc(1); 
+}
+
+@mixin button-expanded {
+	@include button-base();
+	@include button-expand();
+	@include button-style($primary-color, darken($primary-color, 10%), $white);
+	text-transform: uppercase;
+	font-family: $footer-font-family;
+	font-size: rem-calc(13);
+	letter-spacing: rem-calc(1); 
+}
+
+@mixin promo-box-item ($image) {
+	height: 150px;
+		@include breakpoint(medium) {
+			height: 120px;
+		}
+		@include breakpoint(large) {
+			height: 170px;
+		}
+		@include breakpoint(xlarge) {
+			height: 200px;
+		}
+
+	float: left;
+	background: #999;
+	width: 100%;
+	display: inline-block;
+	overflow: hidden;
+	position: relative;
+	cursor: pointer;
+	text-align: center;
+
+	.img {
+		background-image: url($image);
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		display: block;
+		height: 100%;
+		position: relative;
+		width: 100%;
+		transform: scale(1,1);
+		-webkit-backface-visibility: hidden;
+		transition: all 1s ease-in-out 0s;
+	}
+	&:hover .img{
+		transform: scale(1.1, 1.1);
+	}
+
+	.overlay {
+		-webkit-backface-visibility: hidden;
+		transition: all 0.3s ease-in-out 0s;
+		height: 100%;
+		left: 0;
+		position: absolute;
+		top: 0;
+		width: 100%;
+		z-index: 1;
+		background: rgba(0,0,0,0.6);  
+	}
+
+	.content {
+		left: 0;
+		right: 0;
+		top: 50%;
+		position: absolute;
+		z-index: 2;
+		transform: translateY(-50%);
+		
+		h4 {
+			color: $white;
+			font-size: rem-calc(18);
+
+			@include breakpoint(large) {
+				font-size: rem-calc(26);
+			}
+		}
+	}
+}
