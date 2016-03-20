@@ -6,7 +6,7 @@
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <title>Manchester Curious</title>
       <link rel="stylesheet" href="css/vendor/owl.carousel.min.css">
-     
+      <link rel="stylesheet" href="css/vendor/owl.theme.default.min.css">      
      <link rel="stylesheet" href="css/app.css">
    </head>
    <body>

@@ -1,0 +1,10 @@
+<li><a href="/">Home</a></li>
+<li><a href="programme.php">Programme</a></li>
+<li><a href="buildings-and-tours.php">Buildings &amp; Tours</a></li>
+<li><a href="map.php">Map</a></li>
+<li><a href="event-planner.php">Event Planner</a></li>
+<li><a href="about.php">About</a></li>
+<li><a href="get-involved.php">Get Involved</a></li>
+<li><a href="news.php">News</a></li>
+<li><a href="partners.php">Partners</a></li>
+<li><a href="contact.php">Contact</a></li>

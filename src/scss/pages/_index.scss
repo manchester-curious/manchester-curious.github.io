@@ -1,0 +1,81 @@
+.home-slider-container {
+	@include row-expanded;
+	margin-bottom: rem-calc(25);
+	.owl-carousel {
+		position: relative;
+	}
+	.image-container {
+		position: relative;
+
+		&:after {
+		  content: " ";
+		  z-index: 0;
+		  display: block;
+		  position: absolute;
+		  height: 100%;
+		  top: 0;
+		  left: 0;
+		  right: 0;
+		  background: rgba(0, 0, 0, 0.5);
+
+		}
+
+		.text {
+			position: absolute;
+			z-index: 1000;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			text-align: center;
+			color: $white;
+			font-family: $header-font-family;
+			@include letter-transform;
+			width: 100%;
+			font-size: rem-calc(16);
+
+			@include breakpoint(medium) {
+				font-size: rem-calc(30);
+			}			
+			@include breakpoint(large) {
+				font-size: rem-calc(38);
+			}
+			@include breakpoint(xlarge) {
+				font-size: rem-calc(50);
+			}	
+		}
+	}
+}
+
+.intro-text {
+	@include grid-col();
+	text-align: center;
+
+	@include breakpoint(medium) {
+		@include grid-col(10);
+		@include grid-column-offset(1);	
+	}
+}
+
+
+.featured-tours {
+	margin-bottom: 0
+}
+.see-all {
+	@include grid-col(9);
+	@include grid-column-position(center);
+	margin-top: rem-calc(25);
+
+	@include breakpoint(medium) {
+		@include grid-col(4);
+		@include grid-column-position(center);		
+	}
+	h3 {
+		text-transform: none;
+		text-align: center;
+		font-style: italic;
+		font-weight: normal;
+		font-family: $secondary-body-font-family;
+		font-size: rem-calc(20);
+	}	
+}
+
