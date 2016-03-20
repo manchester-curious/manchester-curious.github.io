@@ -1,8 +1,35 @@
 .full-width-header {
 	@include row-expanded;
 	background-color: $medium-gray;
-	padding-top: rem-calc(30);
-	padding-bottom: rem-calc(30);	
+		padding-top: rem-calc(20);
+
+	@include breakpoint(large) {
+		padding-top: rem-calc(50);
+		padding-bottom: rem-calc(50);
+	}
+
+	.text-container,
+	.slider-container {
+		@include grid-col();
+
+		@include breakpoint(large) {
+			@include grid-col(6);	
+		}
+	}
+	.text-container {
+		@include breakpoint(large) {
+			@include grid-col-pos(-6);	
+		}
+	}
+	.slider-container {
+		margin-bottom:rem-calc(20);
+
+		@include breakpoint(large) {
+			@include grid-col-pos(6);
+			margin-bottom:0;	
+		}
+
+	}	
 	.info-container {
 		@include grid-row();
 		color: $white;
@@ -11,7 +38,7 @@
 			@include letter-transform;			
 		}
 		h1 {
-			font-size: rem-calc(26);
+			// font-size: rem-calc(26);
 			color: $white;
 		}
 		h1:after {
@@ -30,22 +57,96 @@
 		p.venue {
 			font-family: $header-font-family;
 		}
-		.text-container,
-		.slider-container {
-			@include grid-col(6);
-		}
 	}
+}
+.full-width-body {
+	@include row-expanded;
+	padding-top: rem-calc(50);
+	padding-bottom: rem-calc(50);
+	@include breakpoint(large) {
+		background: url('../images/bg-tour-detail.gif') top center;	
+	}	
 }
 .booking-container,
 .more-info-container {
-	@include grid-col(6);	
+	@include grid-col();
+
+	@include breakpoint(large) {
+		@include grid-col(6);
+	}	
 }
+.booking-container,
+.text-container  {
+	@include breakpoint(large) {
+		padding-right:rem-calc(40)!important;
+	}
+}
+.slider-container,
 .more-info-container {
-	background-color: $white;
+	@include breakpoint(large) {
+		padding-left:rem-calc(40)!important;
+	}	
+}
+.booking-container {
+	margin-bottom: rem-calc(20);
+	table {
+		margin-bottom: rem-calc(40);
+
+		tr td span {
+			font-family: $header-font-family;
+			color: $dark-gray;
+			
+			@include breakpoint(medium) {
+				display: none;
+
+			}	
+		}
+	}
+	.tour-summary-container {
+		@include grid-row();
+		margin-bottom: rem-calc(40);		
+		ul {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+		}
+
+		.tour-summary {
+			@include grid-col;
+			padding-left: 0!important;
+
+			@include breakpoint(medium) {
+				@include grid-col(9);
+			}
+			ul li:last-child {
+				@include breakpoint(medium) {
+					display: none;
+				}				
+			}
+			ul li strong {
+				font-family: $header-font-family;
+				color: $dark-gray;
+			}		
+		}
+		.type {
+			display: none;
+
+			@include breakpoint(medium) {
+				@include grid-col(3);
+				display: block;
+			}
+			ul li {
+				text-align: center;
+			}				
+		}		
+	}
 }
 
 body#tour-detail {
 	.container {
 		margin-bottom: 0;
 	}
+}
+.map {
+	margin-bottom: rem-calc(40);
 }

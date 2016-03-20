@@ -5,23 +5,19 @@
      <meta http-equiv="x-ua-compatible" content="ie=edge">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <title>Manchester Curious</title>
-     <link rel="stylesheet" href="css/vendor/owl.carousel.css">
-     <link rel="stylesheet" href="css/vendor/owl.theme.css">     
+      <link rel="stylesheet" href="css/vendor/owl.carousel.min.css">
+      <link rel="stylesheet" href="css/vendor/owl.theme.default.min.css">      
      <link rel="stylesheet" href="css/app.css">
    </head>
    <body>
      <?php include ('partials/header.php'); ?>
-     <div class="slider-container">
-         <div id="slider" class="owl-carousel owl-theme">
-               <!--
-             <div class="item" style="background-image:url(http://placehold.it/1380x600);"></div>
-             <div class="item" style="background-image:url(http://placehold.it/1380x600);"></div>
-               -->
-
-              <div class="item"><img src="http://placehold.it/1380x560"></div>
-              <div class="item"><img src="http://placehold.it/1480x560"></div>
-         </div>
-     </div>
+        <div class="home-slider-container">
+           <div class="owl-carousel">
+              <div><img src="http://placehold.it/1800x347" alt=""></div>
+              <div><img src="http://placehold.it/1800x348" alt=""></div>
+              <div><img src="http://placehold.it/1800x349" alt=""></div>                  
+           </div>               
+        </div> 
       <div class="container">
           <div class="intro-text">
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro molestiae iusto quisquam facere praesentium, aperiam ut soluta voluptate provident atque beatae voluptatem modi, ducimus dignissimos, eius culpa sunt repellat. Nobis.</p>
@@ -60,17 +56,16 @@
       <?php include ('partials/js.php'); ?>
       <script src="js/vendor/owl.carousel.min.js"></script>
       <script>
-          $(document).ready(function() {
- 
-  var owl = $("#slider");
- 
-  owl.owlCarousel({
-    navigation : true,
-    singleItem : true,
-    transitionStyle : "fade"
-  });
- 
-});
-</script>
+         $(document).ready(function(){
+            $('.owl-carousel').owlCarousel({
+               loop:true,
+               items:1,
+               autoplay: true,
+               autoplayTimeout: 6000,
+               autoplaySpeed: 1000,
+               animateOut: 'fadeOut',
+            })
+         });
+      </script>
    </body>
 </html>

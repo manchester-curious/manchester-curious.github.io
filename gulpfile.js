@@ -14,6 +14,8 @@ var jsBabelPaths = [
   'bower_components/foundation-sites/js/foundation.util.motion.js',  
   'bower_components/foundation-sites/js/foundation.offcanvas.js',
   'bower_components/foundation-sites/js/foundation.equalizer.js',
+  'bower_components/foundation-sites/js/foundation.interchange.js',
+  'bower_components/foundation-sites/js/foundation.util.timerAndImageLoader.js',   
 ];
 
 
@@ -34,7 +36,7 @@ gulp.task('sass', function() {
 gulp.task("babel", function () {
   return gulp.src(jsBabelPaths)
     .pipe($.babel())
-    .pipe($.concat("all.js"))
+    .pipe($.concat("core.js"))
     .pipe(gulp.dest("js"));
 });
 
@@ -45,6 +47,6 @@ gulp.task('serve', function() {
     });
 });
 
-gulp.task('default', ['sass','serve'], function() {
+gulp.task('default', ['sass','serve','babel'], function() {
   gulp.watch(['scss/**/*.scss'], ['sass']);
 });

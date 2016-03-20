@@ -1,4 +1,5 @@
 .promo-box-bg {
+	border-top: 1px solid $white;
 	@include row-expanded;
 	background-color: $dark-beige;
 	padding: rem-calc(15 0);
@@ -17,9 +18,11 @@
 	.promo-box-outer {
 		@include grid-column();
 		margin-bottom: rem-calc(15);
+		@include grid-column-end;
 
 		@include breakpoint(medium) {
 			@include grid-column(4);
+			@include grid-column-end;
 		}
 	}
 }

@@ -27,7 +27,7 @@ table {
 		color: $dark-gray;
 	}
 	tbody tr {
-		border-bottom: 1px solid #ccc;	
+		border-bottom:1px solid smart-scale($table-background, 10);	
 	}
 	tbody tr td {
 		padding-top: rem-calc(30);

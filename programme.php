@@ -33,19 +33,19 @@
                      <td valign="top">9am-10am</td>
                      <td valign="top"><a href="tour-detail.php">Northern Quarter And Ancoats Guided Walk With Ken Moth</a></td>
                      <td valign="top">Brooks Building, Faculty of Education, Manchester Metropolitan University</td>
-                     <td><a href="#" class="button button-expanded">Book</a></td>
+                     <td valign="top"><a href="#" class="button button-expanded">Book</a></td>
                   </tr>
                   <tr>
                      <td valign="top">9am-10am</td>
                      <td valign="top">Whitworth Behind The Scenes</td>
                      <td valign="top">Whitworth Gallery</td>
-                     <td><a href="#" class="button button-expanded">Book</a></td>
+                     <td valign="top"><a href="#" class="button button-expanded">Book</a></td>
                   </tr>
                   <tr>
                      <td valign="top">9am-10am</td>
                      <td valign="top">This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</td>
                      <td valign="top">Brooks Building, Faculty of Education, Manchester Metropolitan University</td>
-                     <td><a href="#" class="button button-expanded">Book</a></td>
+                     <td valign="top"><a href="#" class="button button-expanded">Book</a></td>
                   </tr>
                </tbody>
             </table>
@@ -144,19 +144,19 @@
                      <td valign="top">9am-10am</td>
                      <td valign="top">Northern Quarter And Ancoats Guided Walk With Ken Moth</td>
                      <td valign="top">Brooks Building, Faculty of Education, Manchester Metropolitan University</td>
-                     <td><a href="#" class="button button-expanded">More</a></td>
+                     <td valign="top"><a href="#" class="button button-expanded">More</a></td>
                   </tr>
                   <tr>
                      <td valign="top">9am-10am</td>
                      <td valign="top">Whitworth Behind The Scenes</td>
                      <td valign="top">Whitworth Gallery</td>
-                     <td><a href="#" class="button button-expanded">More</a></td>
+                     <td valign="top"><a href="#" class="button button-expanded">More</a></td>
                   </tr>
                   <tr>
                      <td valign="top">9am-10am</td>
                      <td valign="top">This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</td>
                      <td valign="top">Brooks Building, Faculty of Education, Manchester Metropolitan University</td>
-                     <td><a href="#" class="button button-expanded">More</a></td>
+                     <td valign="top"><a href="#" class="button button-expanded">More</a></td>
                   </tr>
                </tbody>
             </table>
@@ -165,8 +165,8 @@
       <div class="promo-box-bg">
          <div class="promo-box-container">
             <?php include ('partials/promo-get-involved.php'); ?> 
-            <?php include ('partials/promo-building-tours.php'); ?> 
-            <?php include ('partials/promo-pevent-planner.php'); ?> 
+            <?php include ('partials/promo-event-planner.php'); ?> 
+            <?php include ('partials/promo-buildings-tours.php'); ?> 
          </div> <!--/.promo-box-container--> 
       </div> <!--/.promo-box-bg-->
        
