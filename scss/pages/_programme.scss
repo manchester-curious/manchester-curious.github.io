@@ -1,0 +1,7 @@
+.heading-banner {
+	@include heading-banner(1);
+}
+.table-container {
+	@include grid-col();
+	margin-bottom: rem-calc(40);
+}

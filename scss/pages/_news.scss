@@ -1,0 +1,41 @@
+.news-container {
+	@include grid-col();	
+}
+
+.news-detail-container {
+	@include grid-col();
+
+	@include breakpoint(medium) {
+		@include grid-column(10);
+		@include grid-column-position(center);
+		}
+
+	@include breakpoint(large) {
+		@include grid-column(8);
+		@include grid-column-position(center);		
+		}
+
+	.news-details {
+		text-align: center;
+		margin: rem-calc(30) 0;
+
+		img {
+			margin-bottom: rem-calc(80);
+		}
+		h1,
+		p {
+			margin: 0;
+			padding: 0;
+		}
+		h1 {
+			font-size: rem-calc(30);
+		}
+		p {
+			@include letter-transform;
+		}
+		a {
+			color: $medium-gray;
+		}
+	}		
+}
+

@@ -1,0 +1,51 @@
+.full-width-header {
+	@include row-expanded;
+	background-color: $medium-gray;
+	padding-top: rem-calc(30);
+	padding-bottom: rem-calc(30);	
+	.info-container {
+		@include grid-row();
+		color: $white;
+		h1,
+		p.venue {
+			@include letter-transform;			
+		}
+		h1 {
+			font-size: rem-calc(26);
+			color: $white;
+		}
+		h1:after {
+			margin-top: rem-calc(5);
+			margin-bottom:  rem-calc(25);
+			height: rem-calc(3);
+			background-color: $primary-color;
+			content: '';
+			display: block;
+			width: rem-calc(42);
+		}
+		p {
+			font-family: $secondary-body-font-family;
+			font-weight: 300;			
+		}
+		p.venue {
+			font-family: $header-font-family;
+		}
+		.text-container,
+		.slider-container {
+			@include grid-col(6);
+		}
+	}
+}
+.booking-container,
+.more-info-container {
+	@include grid-col(6);	
+}
+.more-info-container {
+	background-color: $white;
+}
+
+body#tour-detail {
+	.container {
+		margin-bottom: 0;
+	}
+}

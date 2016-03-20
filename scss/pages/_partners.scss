@@ -1,0 +1,20 @@
+.partners-container {
+	@include grid-col();
+
+	@include breakpoint(medium) {
+		@include grid-column(10);
+		@include grid-column-offset(1);
+	}
+}
+
+.media-object {
+	@include media-object-container;
+	margin-bottom: rem-calc(35);
+}
+.media-object-section {
+	@include media-object-section;
+
+	a {
+		color:$dark-gray;
+	}
+}

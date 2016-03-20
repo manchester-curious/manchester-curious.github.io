@@ -1,0 +1,13 @@
+.tour-type {
+	height: rem-calc(40);
+	width: rem-calc(40);
+	background-repeat: none;
+	background-size:  rem-calc(40)  rem-calc(40);
+}
+
+.walking {
+	background-image: url('../images/icon-tour-walking.png');
+}
+.building {
+	background-image: url('../images/icon-tour-building.png');
+}

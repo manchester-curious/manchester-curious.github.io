@@ -7,6 +7,25 @@
 		@include grid-column-offset(1);	
 	}
 }
+.slider-container {
+	@include row-expanded;
+}
+.featured-tours {
+	margin-bottom: 0
+}
+.see-all {
+	@include grid-col(4);
+	@include grid-column-position(center);
+	margin-top: rem-calc(25);
+	h3 {
+		text-transform: none;
+		text-align: center;
+		font-style: italic;
+		font-weight: normal;
+		font-family: $secondary-body-font-family;
+		font-size: rem-calc(20);
+	}	
+}
 
 #owl-demo .item img{
     display: block;

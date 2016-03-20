@@ -1,4 +1,5 @@
 footer {
+	@include row-expanded;
 	border-top: 1px solid #ccc;
 	padding: rem-calc(40 0 0 0);
 	color: $medium-gray;

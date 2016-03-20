@@ -3,7 +3,7 @@
       <a href="/buildings-and-tours.php">
          <div class="image"></div>
          <div class="overlay"></div>
-         <div class="content"><h4>Biuldings &amp; Tours</h4></div>
+         <div class="content"><h4>Buildings &amp; Tours</h4></div>
       </a>
    </div>
 </div>

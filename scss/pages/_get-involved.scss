@@ -1,0 +1,22 @@
+body#get-involved {
+
+.leftcol {
+	@include grid-col();
+	display: block;
+
+	@include breakpoint(medium) {
+		@include grid-col(8);
+		display: block;			
+	}
+}
+
+.rightcol {
+	@include grid-col();
+	
+	@include breakpoint(medium) {
+		@include grid-col(4);
+		@include grid-column-offset(0);					
+	}
+}
+
+}
