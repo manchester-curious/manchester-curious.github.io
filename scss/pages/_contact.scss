@@ -1,3 +1,6 @@
+.heading-banner-contact {
+	@include heading-banner(9);
+}
 .input {
 	@include grid-col();
 }

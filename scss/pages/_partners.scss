@@ -1,3 +1,6 @@
+.heading-banner-partners {
+	@include heading-banner(8);
+}
 .partners-container {
 	@include grid-col();
 

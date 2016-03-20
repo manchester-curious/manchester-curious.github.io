@@ -9,18 +9,20 @@
    </head>
    <body>
       <?php include ('partials/header.php'); ?>
-      <div class="heading-banner">
+      <div class="heading-banner heading-banner-tours">
          <div class="content">
             <h1>Buildings &amp; Tours</h1>
          </div>
       </div>
       <div class="container">
-         <div class="ul legend">
-            <div class="li"><span class="tour-type walking"></span>Walking Tour</div>
-            <div class="li"><span class="tour-type building"></span>Building Tour</div>            
-         </div>
+         <div class="tour-type-container">
+            <ul class="tour-icons">
+              <li><div class="tour-type building"></div><br>Building Tour</li>
+              <li><div class="tour-type walking"></div><br>Walking Tour</li>
+            </ul>
+         </div>             
          <div class="table-container">
-            <table>
+            <table class="tours">
                <thead>
                   <tr>
                      <th width="373">Event</th>
@@ -31,22 +33,22 @@
                </thead>
                <tbody>
                   <tr>
-                     <td valign="top">Northern Quarter And Ancoats Guided Walk With Ken Moth</td>
-                     <td valign="top">Brooks Building, Faculty of Education, Manchester Metropolitan University</td>
-                     <td valign="top"><div class="tour-type walking"></div></td>
-                     <td><a href="tour-detail.php" class="button button-expanded">More</a></td>
+                     <td valign="top"><span>Event:</span> Northern Quarter And Ancoats Guided Walk With Ken Moth</td>
+                     <td valign="top"><span>Venue:</span> Brooks Building, Faculty of Education, Manchester Metropolitan University</td>
+                     <td valign="top"><div class="tour-mobile"><span>Tour type:</span> Walking</div><div class="tour-type walking"></div></td>
+                     <td valign="top"><a href="tour-details.php" class="button button-expanded">More</a></td>
                   </tr>
                   <tr>
-                     <td valign="top">Whitworth Behind The Scenes</td>
-                     <td valign="top">Whitworth Gallery</td>
-                     <td valign="top"><div class="tour-type walking"></div></td>
-                     <td><a href="tour-detail.php" class="button button-expanded">More</a></td>
+                     <td valign="top"><span>Event:</span> Northern Quarter And Ancoats Guided Walk With Ken Moth</td>
+                     <td valign="top"><span>Venue:</span> Brooks Building, Faculty of Education, Manchester Metropolitan University</td>
+                     <td valign="top"><div class="tour-mobile"><span>Tour type:</span> Building</div><div class="tour-type building"></div></td>
+                     <td valign="top"><a href="tour-details.php" class="button button-expanded">More</a></td>
                   </tr>
                   <tr>
-                     <td valign="top">This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</td>
-                     <td valign="top">Brooks Building, Faculty of Education, Manchester Metropolitan University</td>
-                     <td valign="top"><div class="tour-type building"></div></td>
-                     <td><a href="tour-detail.php" class="button button-expanded">More</a></td>
+                     <td valign="top"><span>Event:</span> Northern Quarter And Ancoats Guided Walk With Ken Moth</td>
+                     <td valign="top"><span>Venue:</span> Brooks Building, Faculty of Education, Manchester Metropolitan University</td>
+                     <td valign="top"><div class="tour-mobile"><span>Tour type:</span> Walking</div><div class="tour-type walking"></div></td>
+                     <td valign="top"><a href="tour-details.php" class="button button-expanded">More</a></td>
                   </tr>
                </tbody>
             </table>

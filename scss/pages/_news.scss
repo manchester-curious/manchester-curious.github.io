@@ -1,3 +1,6 @@
+.heading-banner-news {
+	@include heading-banner(7);
+}
 .news-container {
 	@include grid-col();	
 }

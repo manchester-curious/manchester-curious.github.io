@@ -1,3 +1,6 @@
+.heading-banner-event {
+	@include heading-banner(4);
+}
 .planner-container {
 	@include grid-col();	
 }

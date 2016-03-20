@@ -9,7 +9,7 @@
    </head>
    <body id="get-involved">
       <?php include ('partials/header.php'); ?>
-      <div class="heading-banner">
+      <div class="heading-banner heading-banner-get-involved">
          <div class="content">
             <h1>Get Involved</h1>
          </div>
@@ -41,7 +41,7 @@
       </div> <!--/.container--> 
       <div class="promo-box-bg">
          <div class="promo-box-container">
-            <?php include ('partials/promo-building-tours.php'); ?> 
+            <?php include ('partials/promo-buildings-tours.php'); ?> 
             <?php include ('partials/promo-event-planner.php'); ?> 
             <?php include ('partials/promo-programme.php'); ?> 
          </div> <!--/.promo-box-container--> 

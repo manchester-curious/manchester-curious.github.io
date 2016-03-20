@@ -10,7 +10,24 @@
 	@include menu-base;
 	@include menu-direction(vertical);
 	font-family: $header-font-family;
+
+	li a {
+		border-bottom: 1px solid darken($dark-gray, 5);
+		padding: rem-calc(20) rem-calc(20);
+		color: $white;
+
+		&:hover {
+			color: $primary-color;
+		}		
+	}
 }
+.title-bar-title {
+	a {
+		font-family: $header-font-family;
+		color: $white;		
+	}
+}
+
 
 header {
 	@include grid-row;

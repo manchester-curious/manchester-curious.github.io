@@ -9,7 +9,7 @@
    </head>
    <body>
       <?php include ('partials/header.php'); ?>
-      <div class="heading-banner">
+      <div class="heading-banner heading-banner-partners">
          <div class="content">
             <h1>Partners</h1>
          </div>
@@ -25,7 +25,7 @@
       <div class="promo-box-bg">
          <div class="promo-box-container">
             <?php include ('partials/promo-get-involved.php'); ?> 
-            <?php include ('partials/promo-building-tours.php'); ?> 
+            <?php include ('partials/promo-buildings-tours.php'); ?> 
             <?php include ('partials/promo-programme.php'); ?> 
          </div> <!--/.promo-box-container--> 
       </div> <!--/.promo-box-bg-->

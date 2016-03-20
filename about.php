@@ -9,7 +9,7 @@
    </head>
    <body>
       <?php include ('partials/header.php'); ?>
-      <div class="heading-banner">
+      <div class="heading-banner heading-banner-about">
          <div class="content">
             <h1>About</h1>
          </div>
@@ -19,7 +19,6 @@
          <div class="rightcol">
             <p>Drawing inspiration from London Open House and Heritage Open days, Manchester Curious is an independently run, not-for-profit event. The aim of Manchester Curious is to open the doors of some of Manchester’s finest buildings and hidden spaces to discover the secrets and innovations behind them, and also to give the opportunity to uncover the history, developments and context of Manchester through the ages with guided walking tours.</p>
             <p>The 2016 Festival will run from Thursday 6 October to Sunday 9th October and will feature a series of guided tours and walks. These are designed to appeal to a wider audience, with the idea of making the concept of architecture accessible to all. We are currently working on the line up for 2016 but please see our 2015 programme for an idea of what is to come.</p>
-            <h2>Heading</h2>
 
          </div>
       </div> <!--/.container--> 

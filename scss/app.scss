@@ -10,7 +10,7 @@
 @import 'helpers/variables';
 @import 'helpers/mixins';
 
-// @include foundation-everything;
+//@include foundation-everything;
 
 @include foundation-global-styles;
 // @include foundation-grid;
@@ -74,3 +74,6 @@
 @import 'pages/partners';
 @import 'pages/contact';
 @import 'pages/tour-detail';
+@import 'pages/map';
+@import 'pages/event-planner';
+@import 'pages/about';

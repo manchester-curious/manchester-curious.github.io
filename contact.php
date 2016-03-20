@@ -9,7 +9,7 @@
    </head>
    <body>
       <?php include ('partials/header.php'); ?>
-      <div class="heading-banner">
+      <div class="heading-banner heading-banner-contact">
          <div class="content">
             <h1>Contact</h1>
          </div>

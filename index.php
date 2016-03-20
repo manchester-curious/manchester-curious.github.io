@@ -12,12 +12,12 @@
    <body>
      <?php include ('partials/header.php'); ?>
         <div class="home-slider-container">
-           <div class="owl-carousel">
-              <div><img src="http://placehold.it/1800x347" alt=""></div>
-              <div><img src="http://placehold.it/1800x348" alt=""></div>
-              <div><img src="http://placehold.it/1800x349" alt=""></div>                  
-           </div>               
-        </div> 
+          <div class="owl-carousel">
+              <div class="image-container"><div class="text">A celebration<br> of Manchester's secret spaces<br>6-9th Oct 2016</div><img data-interchange="[images/homepage-slides/sm/1.jpg, small], [images/homepage-slides/md/1.jpg, medium], [images/homepage-slides/lg/1.jpg, large]"> </div>
+              <div class="image-container"><div class="text">A celebration<br> of Manchester's secret spaces<br>6-9th Oct 2016</div><img data-interchange="[images/homepage-slides/sm/2.jpg, small], [images/homepage-slides/md/2.jpg, medium], [images/homepage-slides/lg/2.jpg, large]"> </div>
+              <div class="image-container"><div class="text">A celebration<br> of Manchester's secret spaces<br>6-9th Oct 2016</div><img data-interchange="[images/homepage-slides/sm/3.jpg, small], [images/homepage-slides/md/3.jpg, medium], [images/homepage-slides/lg/3.jpg, large]"> </div>              
+          </div> 
+      </div>
       <div class="container">
           <div class="intro-text">
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro molestiae iusto quisquam facere praesentium, aperiam ut soluta voluptate provident atque beatae voluptatem modi, ducimus dignissimos, eius culpa sunt repellat. Nobis.</p>
@@ -64,6 +64,7 @@
                autoplayTimeout: 6000,
                autoplaySpeed: 1000,
                animateOut: 'fadeOut',
+               mouseDrag: false,
             })
          });
       </script>

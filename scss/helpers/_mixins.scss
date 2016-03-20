@@ -95,7 +95,7 @@
 }
 
 @mixin heading-banner ($name) {
-	background-image: url('../images/heading-banner/sm/heading-banner-#{$name}.jpg');
+	background-image: url('../images/heading-banners/sm/#{$name}.jpg');
 	background-position: center center;
 	background-repeat: none;
 	background-size: cover;
@@ -105,11 +105,11 @@
 	margin-bottom: rem-calc(60);
 
 	@include breakpoint(medium) {
-		background-image: url('../images/heading-banner/md/heading-banner-#{$name}.jpg');
+		background-image: url('../images/heading-banners/md/#{$name}.jpg');
 		height: 127px;
 	}
 	@include breakpoint(large) {
-		background-image: url('../images/heading-banner/lg/heading-banner-#{$name}.jpg');
+		background-image: url('../images/heading-banners/lg/#{$name}.jpg');
 		height: 242px;
 	}
 

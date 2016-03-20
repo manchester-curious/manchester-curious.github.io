@@ -20,6 +20,11 @@
 		@include breakpoint(large) {
 			@include grid-col-pos(-6);	
 		}
+		h1 {
+			@include breakpoint(large) {
+				font-size: rem-calc(30);	
+			}			
+		}
 	}
 	.slider-container {
 		margin-bottom:rem-calc(20);
@@ -137,6 +142,11 @@
 			}
 			ul li {
 				text-align: center;
+				font-family: $header-font-family;
+				@include letter-transform;
+				color: $dark-gray;
+				margin-bottom: rem-calc(6);
+				font-size: rem-calc(12);				
 			}				
 		}		
 	}

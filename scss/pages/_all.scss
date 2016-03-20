@@ -1,10 +1,16 @@
 .off-canvas-content {
 	background-color: $light-beige;
 }
-
+.js-off-canvas-exit {
+	z-index: 10000;
+}
+.off-canvas-wrapper,
+.off-canvas {
+	background-color: $dark-gray;
+}
 .container {
 	@include grid-row;
-	margin-bottom: rem-calc(80);
+	margin-bottom:rem-calc(40);
 }
 
 img {
