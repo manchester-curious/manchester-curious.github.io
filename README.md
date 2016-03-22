@@ -11,7 +11,7 @@ Built with [Foundation 6](http://foundation.zurb.com/sites/docs/).
 
 - I haven't optimised the js/css.
 
--I'm not convinced that the layout for 'Programme' and 'Buildings & Tours' works on mobile - what do you think?
+- I'm not convinced that the layout for 'Programme' and 'Buildings & Tours' works on mobile - what do you think?
 
 - We also need to decide what elements to leave out on mobiles.
 
