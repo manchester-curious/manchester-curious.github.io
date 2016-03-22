@@ -9,7 +9,7 @@ Built with [Foundation 6](http://foundation.zurb.com/sites/docs/).
 
 - I've put all the common elements into the 'partials' directory for easy maintenance.
 
-- I haven't optimised the js/css.
+- I haven't optimised the js/css, though I have concatenated the required Foundation js files into js/core.js.
 
 - I'm not convinced that the layout for 'Programme' and 'Buildings & Tours' works on mobile - what do you think?
 
