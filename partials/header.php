@@ -9,13 +9,13 @@
         <div class="title-bar">
             <div class="title-bar-left">
                <button class="menu-icon" type="button" data-open="mobile-menu"></button>
-                <span class="title-bar-title"><a href="/">Manchester Curious</a></span>
+                <span class="title-bar-title"><a href="index.php">Manchester Curious</a></span>
             </div>
         </div>
         <div class="header-bg">
             <header>
                 <div class="logo">
-                    <a href="/" alt="Logo" title="Manchester Curious">Manchester Curious</a>
+                    <a href="index.php" alt="Logo" title="Manchester Curious">Manchester Curious</a>
                 </div>
                 <nav>
                     <ul class="main-nav">

@@ -1,4 +1,4 @@
-<li><a href="/">Home</a></li>
+<li><a href="index.php">Home</a></li>
 <li><a href="programme.php">Programme</a></li>
 <li><a href="buildings-and-tours.php">Buildings &amp; Tours</a></li>
 <li><a href="map.php">Map</a></li>

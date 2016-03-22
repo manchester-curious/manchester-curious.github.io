@@ -1,7 +1,7 @@
 <div class="module-outer">
     <div class="module-inner" data-equalizer-watch>
         <div class="image">
-            <a href="tour-detail.php">
+            <a href="tour-details.php">
                 <img src="http://placehold.it/380x220" alt="">
             </a>  
         </div>
