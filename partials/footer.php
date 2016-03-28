@@ -29,6 +29,11 @@
                   <div class="mid-col">
                      <h5>Stay in The Loop</h5>
                      MAILCHIMP CODE GOES HERE
+                     <ul class="social-media">
+                        <li class="tw"><a href="https://twitter.com/mcrcurious2016" target="_blank">Twitter</a></li>
+                        <li class="fb"><a href="https://www.facebook.com/manchestercurious" target="_blank">Facebook</a></li>
+                        <li class="is"><a href="https://www.instagram.com/mcrcurious/" target="_blank">Instagram</a></li>
+                     </ul>
                   </div>
                   <div class="right-col">
                      <h5>Download Map</h5>

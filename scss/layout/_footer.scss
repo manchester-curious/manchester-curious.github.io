@@ -79,6 +79,55 @@ footer {
 			@include grid-column-offset(1);			
 		}
 	}
+	.social-media {
+		@include menu-simple;
+		margin-left: 0;
+		margin-top: rem-calc(20);
+
+		li {
+			text-indent:-3333px;
+			width: rem-calc(32);
+			height: rem-calc(32);
+			margin-right: rem-calc(5);
+
+			@include breakpoint(medium) {
+				width: rem-calc(24);
+				height: rem-calc(24);
+			}
+		}			
+
+		li.tw {
+			background-size: rem-calc(32 32);
+			@include breakpoint(medium) {
+				background-size: rem-calc(24 24);				
+			}
+			background-image: url('../images/icon-soc-med-tw.png');			
+		}
+		li.fb {
+			background-size: rem-calc(32 32);
+			@include breakpoint(medium) {
+				background-size: rem-calc(24 24);				
+			}			
+			background-image: url('../images/icon-soc-med-fb.png');			
+		}
+		li.is {
+			background-size: rem-calc(32 32);
+			@include breakpoint(medium) {
+				background-size: rem-calc(24 24);				
+			}			
+			background-image: url('../images/icon-soc-med-is.png');			
+		}		
+		li a {
+				width: rem-calc(32);
+				height: rem-calc(32);
+				@include breakpoint(medium) {
+					background-size: rem-calc(24 24);				
+				}				
+				display: block;			
+		}
+
+		
+	}
 }
 
 
