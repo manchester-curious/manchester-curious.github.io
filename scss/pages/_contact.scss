@@ -1,0 +1,17 @@
+.heading-banner-contact {
+	@include heading-banner(9);
+}
+.input {
+	@include grid-col();
+}
+input.button {
+	@include button;
+	float: left;
+}
+textarea {
+	height: rem-calc(80);
+}
+label {
+	font-family: $secondary-body-font-family;
+	@include letter-transform;
+}

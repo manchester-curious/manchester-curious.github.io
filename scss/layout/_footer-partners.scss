@@ -1,0 +1,30 @@
+.footer-partners-bg {
+	background-color: $white;
+
+	.footer-partners-outer {
+		@include grid-row;
+		padding: rem-calc(50 0 60 0);
+
+		.footer-partners-inner {
+			@include grid-column;
+
+			.logos-container {
+				text-align: center;
+				margin-top: rem-calc(25);
+
+				.logos {
+					@include menu-simple;
+				}
+				.logos li {
+					margin-bottom: rem-calc(8);
+				}
+				.logos li img {
+					vertical-align: top;
+				}
+
+			}
+
+		}
+
+	}
+}

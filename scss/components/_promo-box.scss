@@ -1,0 +1,42 @@
+.promo-box-bg {
+	border-top: 1px solid $white;
+	@include row-expanded;
+	background-color: $dark-beige;
+	padding: rem-calc(15 0);
+	@include breakpoint(medium) {
+		padding-top: rem-calc(30);
+		padding-bottom: rem-calc(30);		
+	}
+	@include breakpoint(large) {
+		padding-top: rem-calc(50);
+		padding-bottom: rem-calc(50);	
+	}
+}
+.promo-box-container {
+	@include grid-row;
+
+	.promo-box-outer {
+		@include grid-column();
+		margin-bottom: rem-calc(15);
+		@include grid-column-end;
+
+		@include breakpoint(medium) {
+			@include grid-column(4);
+			@include grid-column-end;
+		}
+	}
+}
+
+.promo-get-involved {
+	@include promo-box-item ('../images/promo-get-involved.jpg');
+}
+.promo-event-planner {
+	@include promo-box-item ('../images/promo-event-planner.jpg');
+}
+.promo-programme {
+	@include promo-box-item ('../images/promo-programme.jpg');
+}
+.promo-buildings-tours {
+	@include promo-box-item ('../images/promo-buildings-tours.jpg');
+}
+
