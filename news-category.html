@@ -1,0 +1,45 @@
+---
+---
+<!doctype html>
+<html class="no-js" lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>News</title>
+      <link rel="stylesheet" href="css/app.css">
+   </head>
+   <body>
+      {% include header.html %}
+      <div class="heading-banner heading-banner-news ">
+         <div class="content">
+            <h1>News</h1>
+         </div>
+      </div>        
+      <div class="container">
+          <div class="heading">
+              <h2>Category Name</h2>
+          </div>
+         <div class="news-container" data-equalizer data-equalize-on="small">
+            {% include module-news.html %}
+            {% include module-news.html %}
+            {% include module-news.html %}
+            {% include module-news.html %}
+            {% include module-news.html %}
+            {% include module-news.html %}
+            {% include module-news.html %}
+            {% include module-news.html %}
+         </div>
+      </div> <!--/.container--> 
+      <div class="promo-box-bg">
+         <div class="promo-box-container">
+            {% include promo-get-involved.html %}
+            {% include promo-event-planner.html %}
+            {% include promo-buildings-tours.html %}
+         </div> <!--/.promo-box-container--> 
+      </div> <!--/.promo-box-bg-->
+       
+      {% include footer.html %}
+      {% include js.html %}
+   </body>
+</html>

@@ -1,0 +1,135 @@
+footer {
+	@include row-expanded;
+	border-top: 1px solid #ccc;
+	padding: rem-calc(40 0 0 0);
+	color: $medium-gray;
+	font-family: $secondary-body-font-family;
+	font-size: rem-calc(14);
+	text-align: center;
+	background-color: white;
+	
+	@include breakpoint(medium up) {
+		text-align: left;
+	}
+
+	a {
+		color: $medium-gray;
+	}
+	h5 {
+		margin-bottom: rem-calc(10);
+	}
+
+	.footer-outer {
+		@include grid-row;
+	}
+	.footer-inner {
+		@include grid-column;
+	}
+
+	.left-col {
+		@include grid-column;
+		margin-bottom: rem-calc(35);
+
+		@include breakpoint(medium) {
+			@include grid-column(4);
+		}
+
+		@include breakpoint(large) {
+			@include grid-column(4);
+		}
+		@include breakpoint(xlarge) {
+			@include grid-column(2);
+
+		}		
+
+	.menu-footer {
+			@include menu-simple;
+			@include menu-direction(vertical);
+			margin-left: 0;
+			font-size: rem-calc(13);
+			@include letter-transform(0);
+
+			li {
+				margin-bottom: rem-calc(14);
+			}
+
+			@include breakpoint(medium up) {
+				li {
+					margin-bottom: rem-calc(8);
+				}
+			}			
+		}
+	}
+
+	.mid-col,
+	.right-col {
+		@include grid-column;
+		margin-bottom: rem-calc(35);
+
+		@include breakpoint(medium) {
+			@include grid-column(4);
+		}
+
+		@include breakpoint(large) {
+			@include grid-column(4);
+		}
+
+		@include breakpoint(xlarge) {
+			@include grid-column(4);
+			@include grid-column-offset(1);			
+		}
+	}
+	.social-media {
+		@include menu-simple;
+		margin-left: 0;
+		margin-top: rem-calc(20);
+
+		li {
+			text-indent:-3333px;
+			width: rem-calc(32);
+			height: rem-calc(32);
+			margin-right: rem-calc(5);
+
+			@include breakpoint(medium) {
+				width: rem-calc(24);
+				height: rem-calc(24);
+			}
+		}			
+
+		li.tw {
+			background-size: rem-calc(32 32);
+			@include breakpoint(medium) {
+				background-size: rem-calc(24 24);				
+			}
+			background-image: url('../images/icon-soc-med-tw.png');			
+		}
+		li.fb {
+			background-size: rem-calc(32 32);
+			@include breakpoint(medium) {
+				background-size: rem-calc(24 24);				
+			}			
+			background-image: url('../images/icon-soc-med-fb.png');			
+		}
+		li.is {
+			background-size: rem-calc(32 32);
+			@include breakpoint(medium) {
+				background-size: rem-calc(24 24);				
+			}			
+			background-image: url('../images/icon-soc-med-is.png');			
+		}		
+		li a {
+				width: rem-calc(32);
+				height: rem-calc(32);
+				@include breakpoint(medium) {
+					background-size: rem-calc(24 24);				
+				}				
+				display: block;			
+		}
+
+		
+	}
+}
+
+
+
+

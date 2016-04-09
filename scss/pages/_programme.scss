@@ -1,0 +1,25 @@
+.heading-banner-programme {
+	@include heading-banner(1);
+}
+.table-container {
+	@include grid-col();
+	margin-bottom: rem-calc(40);
+
+	table tr {
+
+		td a.title {
+			color: $medium-gray;
+		}
+		span {
+			font-family: $header-font-family;
+			color: $dark-gray;
+
+			@include breakpoint(medium) {
+				display: none;
+
+			}		
+		}
+	}
+
+}
+
