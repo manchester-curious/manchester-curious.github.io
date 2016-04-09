@@ -9,3 +9,7 @@ _site/
 .jekyll-metadata
 
 Gemfile.lock
+.ruby-version
+
+### Intellij ###
+.idea
