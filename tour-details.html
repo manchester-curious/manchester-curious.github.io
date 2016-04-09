@@ -1,3 +1,5 @@
+---
+---
 <!doctype html>
 <html class="no-js" lang="en">
    <head>
@@ -9,7 +11,7 @@
       <link rel="stylesheet" href="css/app.css">
    </head>
    <body id="tour-detail">
-      <?php include ('partials/header.php'); ?>
+      {% include header.html %}
       <div class="full-width-header">
          <div class="info-container">
             <div class="slider-container">
@@ -85,15 +87,15 @@
             <div class="heading">
                <h2>Recommended Tours</h2>
             </div>
-            <?php include ('partials/module-tours.php'); ?>
-            <?php include ('partials/module-tours.php'); ?> 
-            <?php include ('partials/module-tours.php'); ?> 
-            <?php include ('partials/module-tours.php'); ?>  
+            {% include module-tours.html %}
+            {% include module-tours.html %}
+            {% include module-tours.html %}
+            {% include module-tours.html %}
          </div> <!--/.promo-box-container--> 
       </div> <!--/.promo-box-bg-->
        
-      <?php include ('partials/footer.php'); ?> 
-      <?php include ('partials/js.php'); ?>
+      {% include footer.html %}
+      {% include js.html %}
       <script src="js/vendor/owl.carousel.min.js"></script>
       <script>
          $(document).ready(function(){

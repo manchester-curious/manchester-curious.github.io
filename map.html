@@ -1,3 +1,5 @@
+---
+---
 <!doctype html>
 <html class="no-js" lang="en">
    <head>
@@ -8,7 +10,7 @@
       <link rel="stylesheet" href="css/app.css">
    </head>
    <body>
-      <?php include ('partials/header.php'); ?>
+      {% include header.html %}
       <div class="heading-banner heading-banner-map">
          <div class="content">
             <h1>Map</h1>
@@ -20,13 +22,13 @@
       </div> <!--/.container--> 
       <div class="promo-box-bg">
          <div class="promo-box-container">
-            <?php include ('partials/promo-get-involved.php'); ?> 
-            <?php include ('partials/promo-event-planner.php'); ?> 
-            <?php include ('partials/promo-programme.php'); ?> 
+            {% include promo-get-involved.html %}
+            {% include promo-event-planner.html %}
+            {% include promo-programme.html %}
          </div> <!--/.promo-box-container--> 
       </div> <!--/.promo-box-bg-->
        
-      <?php include ('partials/footer.php'); ?> 
-      <?php include ('partials/js.php'); ?>  
+      {% include footer.html %}
+      {% include js.html %}
    </body>
 </html>
