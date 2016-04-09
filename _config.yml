@@ -1,1 +1,14 @@
+title: Manchester Curious
+description: Manchester Curious aims to open the doors of some of Manchester’s finest buildings and hidden spaces to discover the secrets and innovations behind them.
+name: Manchester Curious
+author: MCRCurious2016
+url: http://www.manchestercurious.com/
+highlighter: rouge
+twitter:
+  username: MCRCurious2016
+logo: /images/logo@2x.gif
 exclude: [vendor]
+
+gems:
+  - jekyll-sitemap
+  - jekyll-seo-tag
