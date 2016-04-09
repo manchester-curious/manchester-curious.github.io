@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/manchester-curious/staging.svg?branch=master)](https://travis-ci.org/manchester-curious/staging)
+
 # Manchester Curious
 
 
