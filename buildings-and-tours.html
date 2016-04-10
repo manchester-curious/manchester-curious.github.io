@@ -7,45 +7,57 @@ promos:
 - event-planner.html
 - programme.html
 banner-style: news
+extra-js:
+- https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js
 ---
 {% include page-heading.html %}
         <div class="container">
-         <div class="tour-type-container">
-            <ul class="tour-icons">
-              <li><div class="tour-type building"></div><br>Building Tour</li>
-              <li><div class="tour-type walking"></div><br>Walking Tour</li>
-            </ul>
-         </div>             
-         <div class="table-container">
-            <table class="tours">
-               <thead>
-                  <tr>
-                     <th width="373">Event</th>
-                     <th width="374">Venue</th>
-                     <th width="40">&nbsp;</th>                     
-                     <th width="120">&nbsp;</th>
-                  </tr>
-               </thead>
-               <tbody>
-                  <tr>
-                     <td valign="top"><span>Event:</span> Northern Quarter And Ancoats Guided Walk With Ken Moth</td>
-                     <td valign="top"><span>Venue:</span> Brooks Building, Faculty of Education, Manchester Metropolitan University</td>
-                     <td valign="top"><div class="tour-mobile"><span>Tour type:</span> Walking</div><div class="tour-type walking"></div></td>
-                     <td valign="top"><a href="tour-details.html" class="button button-expanded">More</a></td>
-                  </tr>
-                  <tr>
-                     <td valign="top"><span>Event:</span> Northern Quarter And Ancoats Guided Walk With Ken Moth</td>
-                     <td valign="top"><span>Venue:</span> Brooks Building, Faculty of Education, Manchester Metropolitan University</td>
-                     <td valign="top"><div class="tour-mobile"><span>Tour type:</span> Building</div><div class="tour-type building"></div></td>
-                     <td valign="top"><a href="tour-details.html" class="button button-expanded">More</a></td>
-                  </tr>
-                  <tr>
-                     <td valign="top"><span>Event:</span> Northern Quarter And Ancoats Guided Walk With Ken Moth</td>
-                     <td valign="top"><span>Venue:</span> Brooks Building, Faculty of Education, Manchester Metropolitan University</td>
-                     <td valign="top"><div class="tour-mobile"><span>Tour type:</span> Walking</div><div class="tour-type walking"></div></td>
-                     <td valign="top"><a href="tour-details.html" class="button button-expanded">More</a></td>
-                  </tr>
-               </tbody>
-            </table>
-         </div>  <!--/.table-container-->
+            <div class="tour-type-container">
+                <ul class="tour-icons">
+                  <li><div class="tour-type building"></div><br>Building Tour</li>
+                  <li><div class="tour-type walking"></div><br>Walking Tour</li>
+                </ul>
+            </div>
+            <div class="table-container">
+                <div id="tours-placeholder">
+                    Loading tours…
+                </div>
+                {% raw %}
+                <script id="tour-template" type="text/x-handlebars-template">
+                    <table class="tours">
+                        <thead>
+                        <tr>
+                            <th width="373">Event</th>
+                            <th width="374">Venue</th>
+                            <th width="40">&nbsp;</th>
+                            <th width="120">&nbsp;</th>
+                        </tr>
+                        </thead>
+                        <tbody id="tours">
+                        {{#each tours}}
+                            <tr>
+                                <td valign="top"><span>Event:</span> {{ title.rendered }}</td>
+                                <td valign="top"><span>Venue:</span> {{ address }} </td>
+                                <td valign="top"><div class="tour-mobile"><span>Tour type:</span> {{ type }} </div><div class="tour-type {{type}}"></div></td>
+                                <td valign="top"><a href="tour-details.html?tour={{slug}}" class="button button-expanded">More</a></td>
+                            </tr>
+                        {{/each}}
+                        </tbody>
+                    </table>
+                </script>
+                {% endraw %}
+                <script type="application/javascript">
+                    var template = Handlebars.compile(document.getElementById('tour-template').innerHTML)
+                    var r = new XMLHttpRequest();
+                    r.open("GET", "http://buildings.manchestercurious.com/wp-json/wp/v2/buildings", true);
+                    r.onreadystatechange = function () {
+                        if (r.readyState != 4 || r.status != 200) {
+                            return;
+                        }
+                        var tours = JSON.parse(r.responseText)
+                        document.getElementById('tours-placeholder').innerHTML = template({'tours': tours});
+                    };
+                    r.send("");
+                </script>
+            </div>  <!--/.table-container-->
         </div> <!--/.container-->

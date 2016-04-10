@@ -23,10 +23,13 @@ bundle install
 ## Tasks
 
 - [ ] Test Jekyll instructions
-- [ ] Introduce Jekyll layouts to reduce duplication in headers
+- [x] Introduce Jekyll layouts to reduce duplication in headers
 - [ ] Does gulp need to know about html now rather than php?
 - [ ] Set up Apache somewhere with URL rewriting to point building / event requests at a single page (I think we can point this at GitHub Pages rather than publish the files over FTP)
+- [x] POC building pages to fetch content from web service and update page
+- [ ] Update page header (title etc) with data from web service
 - [ ] Write JavaScript for building / event pages to fetch content from web service and update page
+- [ ] Make sure we have all the data we need in the web services
 
 ## Notes
 

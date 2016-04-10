@@ -6,19 +6,23 @@ extra-css:
 - css/vendor/owl.carousel.min.css
 final-includes:
 - load-carousel.html
+extra-js:
+- https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js
 ---
+   <script id="tour-detail-template" type="text/x-handlebars-template">
+   {% raw %}
       <div class="full-width-header">
          <div class="info-container">
             <div class="slider-container">
                <div class="owl-carousel">
                   <div class="item"><img src="http://placehold.it/600x347" alt=""></div>
                   <div class="item"><img src="http://placehold.it/600x347" alt=""></div>
-                  <div class="item"><img src="http://placehold.it/600x347" alt=""></div>                  
-               </div>               
-            </div> 
+                  <div class="item"><img src="http://placehold.it/600x347" alt=""></div>
+               </div>
+            </div>
             <div class="text-container">
-               <h1>Northern Quarter And Ancoats Guided Walk With Ken Moth</h1>
-               <p class="venue">Brooks Building, Faculty of Education, Manchester Metropolitan University</p>
+               <h1>{{ title.rendered }}</h1>
+               <p class="venue">{{ title.rendered }}</p>
             </div>  
          </div>
       </div> <!--/.full-width-header-->  
@@ -28,16 +32,16 @@ final-includes:
             <div class="tour-summary-container">
                <div class="tour-summary">
                   <ul>
-                     <li><strong>Venue: </strong>Brooks Building, Faculty of Education, Manchester Metropolitan University</li>
+                     <li><strong>Venue: </strong>{{title.rendered}}</li>
                      <li><strong>Cost:</strong> &pound;3</li>
                      <li><strong>Duration:</strong> 1hr</li>
-                     <li><strong>Tour Type:</strong> Walking tour</li>
+                     <li><strong>Tour Type:</strong> {{ type }}</li>
                   </ul>   
                </div>
                <div class="type">
                   <ul>
                      <li><div class="tour-type walking"></div></li>
-                     <li>Walking Tour</li>
+                     <li>{{ type }}</li>
                   </ul>                  
                </div>
             </div> 
@@ -62,21 +66,21 @@ final-includes:
                   </tr>
                </tbody>
             </table>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt dicta dolor libero, repudiandae, nulla quae neque minima fugiat provident voluptate deserunt odit temporibus veniam, aliquid rerum illo, eos ipsam quidem!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt dicta dolor libero, repudiandae, nulla quae neque minima fugiat provident voluptate deserunt odit temporibus veniam, aliquid rerum illo, eos ipsam quidem!</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt dicta dolor libero, repudiandae, nulla quae neque minima fugiat provident voluptate deserunt odit temporibus veniam, aliquid rerum illo, eos ipsam quidem!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt dicta dolor libero, repudiandae, nulla quae neque minima fugiat provident voluptate deserunt odit temporibus veniam, aliquid rerum illo, eos ipsam quidem!</p>
+            {{{ content.rendered }}}
          </div> <!--/.booking-container-->
          <div class="more-info-container">
             <div class="map"><img src="http://placehold.it/600?text=map+goes+here" alt=""></div>
             <h2>Address/Meeting Point</h2>
-            <p><strong>Address 1, Address 2, Address 3, Postcode</strong></p> 
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam illum perferendis animi odio consequatur adipisci ex repellat debitis, dolorem. Eaque eos veniam, velit dolorum eius nemo ipsam impedit possimus alias?</p> 
-            <h2>Accessibility</h2>
+            <p><strong>{{ meeting_point }}</strong></p>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam illum perferendis animi odio consequatur adipisci ex repellat debitis, dolorem. Eaque eos veniam, velit dolorum eius nemo ipsam impedit possimus alias?</p>
+            <h2>Accessibility</h2>
+            <p>{{ accessibility }}</p>
             <h2>Additional Info</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam illum perferendis animi odio consequatur adipisci ex repellat debitis, dolorem. Eaque eos veniam, velit dolorum eius nemo ipsam impedit possimus alias?</p>
          </div>
       </div> <!--/.container-->
       </div> <!--/.full-width-body-->
+   {% endraw %}
       <div class="promo-box-bg">
          <div class="promo-box-container">
             <div class="heading">
@@ -88,3 +92,41 @@ final-includes:
             {% include module-tours.html %}
          </div> <!--/.promo-box-container-->
       </div> <!--/.promo-box-bg-->
+   </script>
+   <div id="tour-details-placeholder">
+      loading…
+   </div>
+   <script type="application/javascript">
+      function getQueryVariable(variable) {
+         var query = window.location.search.substring(1);
+         var vars = query.split('&');
+         for (var i = 0; i < vars.length; i++) {
+            var pair = vars[i].split('=');
+            if (decodeURIComponent(pair[0]) == variable) {
+               return decodeURIComponent(pair[1]);
+            }
+         }
+         console.error('Query variable %s not found', variable);
+      }
+
+      var template = Handlebars.compile(document.getElementById("tour-detail-template").innerHTML);
+
+      var r = new XMLHttpRequest();
+      r.open("GET", "http://buildings.manchestercurious.com/wp-json/wp/v2/buildings", true);
+      r.onreadystatechange = function () {
+         if (r.readyState != 4 || r.status != 200) {
+            return;
+         }
+         var tours = JSON.parse(r.responseText)
+         // Need to adjust this to the the building ID as a parameter and fetch the specific building instead of all of them
+         for(i = 0; i < tours.length; i++) {
+            var tour = tours[i];
+            if (tour.slug === getQueryVariable('tour')) {
+               document.getElementById("tour-details-placeholder").innerHTML = template(tour);
+               return;
+            }
+         }
+      };
+      r.send("");
+
+   </script>
