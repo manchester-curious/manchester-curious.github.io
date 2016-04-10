@@ -1,0 +1,9 @@
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% for css in page.extra-css %}<link rel="stylesheet" href="{{ css }}">{% endfor %}
+    <link rel="stylesheet" href="css/app.css">
+    {% seo %}
+    <!-- Git hash: {{ site.github.build_revision }} -->
+</head>

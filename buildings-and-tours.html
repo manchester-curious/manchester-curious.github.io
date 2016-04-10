@@ -1,23 +1,15 @@
 ---
+title: Buildings &amp; Tours
+layout: default
+id: buildings-and-tours
+promos:
+- get-involved.html
+- event-planner.html
+- programme.html
+banner-style: news
 ---
-<!doctype html>
-<html class="no-js" lang="en">
-   <head>
-      <meta charset="utf-8">
-      <meta http-equiv="x-ua-compatible" content="ie=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Buildings &amp; Tours</title>
-      <link rel="stylesheet" href="css/app.css">
-   {% seo %}
-   </head>
-   <body>
-      {% include header.html %}
-      <div class="heading-banner heading-banner-tours">
-         <div class="content">
-            <h1>Buildings &amp; Tours</h1>
-         </div>
-      </div>
-      <div class="container">
+{% include page-heading.html %}
+        <div class="container">
          <div class="tour-type-container">
             <ul class="tour-icons">
               <li><div class="tour-type building"></div><br>Building Tour</li>
@@ -55,20 +47,5 @@
                   </tr>
                </tbody>
             </table>
-         </div>  <!--/.table-container--> 
-      </div> <!--/.container-->
-
- 
-             
-      <div class="promo-box-bg">
-         <div class="promo-box-container">
-            {% include promo-get-involved.html %}
-            {% include promo-event-planner.html %}
-            {% include promo-programme.html %}
-         </div> <!--/.promo-box-container--> 
-      </div> <!--/.promo-box-bg-->
-       
-      {% include footer.html %}
-      {% include js.html %}
-   </body>
-</html>
+         </div>  <!--/.table-container-->
+        </div> <!--/.container-->

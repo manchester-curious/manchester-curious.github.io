@@ -1826,7 +1826,7 @@ a.button-expanded {
         .promo-programme .content h4 {
           font-size: 1.625rem; } }
 
-.promo-buildings-tours {
+.promo-buildings-and-tours {
   height: 9.375rem;
   float: left;
   background: #999;
@@ -1837,16 +1837,16 @@ a.button-expanded {
   cursor: pointer;
   text-align: center; }
   @media screen and (min-width: 47.9375em) {
-    .promo-buildings-tours {
+    .promo-buildings-and-tours {
       height: 7.5rem; } }
   @media screen and (min-width: 61.9375em) {
-    .promo-buildings-tours {
+    .promo-buildings-and-tours {
       height: 10.625rem; } }
   @media screen and (min-width: 75em) {
-    .promo-buildings-tours {
+    .promo-buildings-and-tours {
       height: 12.5rem; } }
-  .promo-buildings-tours .image {
-    background-image: url("../images/promo-buildings-tours.jpg");
+  .promo-buildings-and-tours .image {
+    background-image: url("../images/promo-buildings-and-tours.jpg");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1859,11 +1859,11 @@ a.button-expanded {
             transform: scale(1, 1);
     -webkit-backface-visibility: hidden;
     transition: all 1s ease-in-out 0s; }
-  .promo-buildings-tours:hover .image {
+  .promo-buildings-and-tours:hover .image {
     -webkit-transform: scale(1.1, 1.1);
         -ms-transform: scale(1.1, 1.1);
             transform: scale(1.1, 1.1); }
-  .promo-buildings-tours .overlay {
+  .promo-buildings-and-tours .overlay {
     -webkit-backface-visibility: hidden;
     transition: all 0.3s ease-in-out 0s;
     height: 100%;
@@ -1873,7 +1873,7 @@ a.button-expanded {
     width: 100%;
     z-index: 1;
     background: rgba(0, 0, 0, 0.6); }
-  .promo-buildings-tours .content {
+  .promo-buildings-and-tours .content {
     left: 0;
     right: 0;
     top: 50%;
@@ -1882,11 +1882,11 @@ a.button-expanded {
     -webkit-transform: translateY(-50%);
         -ms-transform: translateY(-50%);
             transform: translateY(-50%); }
-    .promo-buildings-tours .content h4 {
+    .promo-buildings-and-tours .content h4 {
       color: #fff;
       font-size: 1.125rem; }
       @media screen and (min-width: 61.9375em) {
-        .promo-buildings-tours .content h4 {
+        .promo-buildings-and-tours .content h4 {
           font-size: 1.625rem; } }
 
 .module-outer {
@@ -2415,7 +2415,7 @@ footer {
       .table-container table tr span {
         display: none; } }
 
-.heading-banner-tours {
+.heading-banner-buildings-and-tours {
   background-image: url("../images/heading-banners/sm/2.jpg");
   background-position: center center;
   background-repeat: none;
@@ -2425,14 +2425,14 @@ footer {
   position: relative;
   margin-bottom: 3.75rem; }
   @media screen and (min-width: 47.9375em) {
-    .heading-banner-tours {
+    .heading-banner-buildings-and-tours {
       background-image: url("../images/heading-banners/md/2.jpg");
       height: 127px; } }
   @media screen and (min-width: 61.9375em) {
-    .heading-banner-tours {
+    .heading-banner-buildings-and-tours {
       background-image: url("../images/heading-banners/lg/2.jpg");
       height: 242px; } }
-  .heading-banner-tours:after {
+  .heading-banner-buildings-and-tours:after {
     content: " ";
     z-index: 10;
     display: block;
@@ -2442,7 +2442,7 @@ footer {
     left: 0;
     right: 0;
     background: rgba(0, 0, 0, 0.6); }
-  .heading-banner-tours .content {
+  .heading-banner-buildings-and-tours .content {
     text-align: center;
     z-index: 100;
     position: absolute;
@@ -2454,7 +2454,7 @@ footer {
     -webkit-transform: translateY(-50%);
         -ms-transform: translateY(-50%);
             transform: translateY(-50%); }
-    .heading-banner-tours .content h1 {
+    .heading-banner-buildings-and-tours .content h1 {
       margin: 0;
       padding: 0;
       color: #fff; }
@@ -2519,7 +2519,7 @@ table.tours tr td .tour-type {
 .building {
   background-image: url("../images/icon-tour-building.png"); }
 
-.heading-banner-event {
+.heading-banner-event-planner {
   background-image: url("../images/heading-banners/sm/4.jpg");
   background-position: center center;
   background-repeat: none;
@@ -2529,14 +2529,14 @@ table.tours tr td .tour-type {
   position: relative;
   margin-bottom: 3.75rem; }
   @media screen and (min-width: 47.9375em) {
-    .heading-banner-event {
+    .heading-banner-event-planner {
       background-image: url("../images/heading-banners/md/4.jpg");
       height: 127px; } }
   @media screen and (min-width: 61.9375em) {
-    .heading-banner-event {
+    .heading-banner-event-planner {
       background-image: url("../images/heading-banners/lg/4.jpg");
       height: 242px; } }
-  .heading-banner-event:after {
+  .heading-banner-event-planner:after {
     content: " ";
     z-index: 10;
     display: block;
@@ -2546,7 +2546,7 @@ table.tours tr td .tour-type {
     left: 0;
     right: 0;
     background: rgba(0, 0, 0, 0.6); }
-  .heading-banner-event .content {
+  .heading-banner-event-planner .content {
     text-align: center;
     z-index: 100;
     position: absolute;
@@ -2558,7 +2558,7 @@ table.tours tr td .tour-type {
     -webkit-transform: translateY(-50%);
         -ms-transform: translateY(-50%);
             transform: translateY(-50%); }
-    .heading-banner-event .content h1 {
+    .heading-banner-event-planner .content h1 {
       margin: 0;
       padding: 0;
       color: #fff; }
@@ -3262,7 +3262,7 @@ body#tour-detail .container {
       padding: 0;
       color: #fff; }
 
-.heading-banner-event {
+.heading-banner-event-planner {
   background-image: url("../images/heading-banners/sm/4.jpg");
   background-position: center center;
   background-repeat: none;
@@ -3272,14 +3272,14 @@ body#tour-detail .container {
   position: relative;
   margin-bottom: 3.75rem; }
   @media screen and (min-width: 47.9375em) {
-    .heading-banner-event {
+    .heading-banner-event-planner {
       background-image: url("../images/heading-banners/md/4.jpg");
       height: 127px; } }
   @media screen and (min-width: 61.9375em) {
-    .heading-banner-event {
+    .heading-banner-event-planner {
       background-image: url("../images/heading-banners/lg/4.jpg");
       height: 242px; } }
-  .heading-banner-event:after {
+  .heading-banner-event-planner:after {
     content: " ";
     z-index: 10;
     display: block;
@@ -3289,7 +3289,7 @@ body#tour-detail .container {
     left: 0;
     right: 0;
     background: rgba(0, 0, 0, 0.6); }
-  .heading-banner-event .content {
+  .heading-banner-event-planner .content {
     text-align: center;
     z-index: 100;
     position: absolute;
@@ -3301,7 +3301,7 @@ body#tour-detail .container {
     -webkit-transform: translateY(-50%);
         -ms-transform: translateY(-50%);
             transform: translateY(-50%); }
-    .heading-banner-event .content h1 {
+    .heading-banner-event-planner .content h1 {
       margin: 0;
       padding: 0;
       color: #fff; }

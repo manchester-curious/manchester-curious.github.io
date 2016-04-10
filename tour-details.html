@@ -1,18 +1,12 @@
 ---
+title: Tour Details
+layout: default
+id: tour-details
+extra-css:
+- css/vendor/owl.carousel.min.css
+final-includes:
+- load-carousel.html
 ---
-<!doctype html>
-<html class="no-js" lang="en">
-   <head>
-      <meta charset="utf-8">
-      <meta http-equiv="x-ua-compatible" content="ie=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Tour Name</title>
-      <link rel="stylesheet" href="css/vendor/owl.carousel.min.css"> 
-      <link rel="stylesheet" href="css/app.css">
-   {% seo %}
-   </head>
-   <body id="tour-detail">
-      {% include header.html %}
       <div class="full-width-header">
          <div class="info-container">
             <div class="slider-container">
@@ -76,13 +70,13 @@
             <h2>Address/Meeting Point</h2>
             <p><strong>Address 1, Address 2, Address 3, Postcode</strong></p> 
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam illum perferendis animi odio consequatur adipisci ex repellat debitis, dolorem. Eaque eos veniam, velit dolorum eius nemo ipsam impedit possimus alias?</p> 
-            <h2>Accessability</h2>
+            <h2>Accessibility</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam illum perferendis animi odio consequatur adipisci ex repellat debitis, dolorem. Eaque eos veniam, velit dolorum eius nemo ipsam impedit possimus alias?</p>
             <h2>Additional Info</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam illum perferendis animi odio consequatur adipisci ex repellat debitis, dolorem. Eaque eos veniam, velit dolorum eius nemo ipsam impedit possimus alias?</p>
          </div>
-      </div> <!--/.container--> 
-      </div> <!--/.full-width-body-->   
+      </div> <!--/.container-->
+      </div> <!--/.full-width-body-->
       <div class="promo-box-bg">
          <div class="promo-box-container">
             <div class="heading">
@@ -92,22 +86,5 @@
             {% include module-tours.html %}
             {% include module-tours.html %}
             {% include module-tours.html %}
-         </div> <!--/.promo-box-container--> 
+         </div> <!--/.promo-box-container-->
       </div> <!--/.promo-box-bg-->
-       
-      {% include footer.html %}
-      {% include js.html %}
-      <script src="js/vendor/owl.carousel.min.js"></script>
-      <script>
-         $(document).ready(function(){
-            $('.owl-carousel').owlCarousel({
-               loop:true,
-               items:1,
-               autoplay: true,
-               autoplayTimeout: 6000,
-               autoplaySpeed: 1000
-            })
-         });
-      </script>
-   </body>
-</html>

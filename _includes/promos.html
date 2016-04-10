@@ -1,0 +1,15 @@
+        {% for promo in page.promos %}{% if forloop.first %}
+        <div class="promo-box-bg">
+            <div class="promo-box-container">{% endif %}{% for page in site.pages %}{% if page.name == promo %}
+                <div class="promo-box-outer">
+                    <div class="promo-box-item promo-{{ page.name | remove:'.html' | slugify }}">
+                        <a href="{{ page.name }}">
+                            <div class="image"></div>
+                            <div class="overlay"></div>
+                            <div class="content"><h4>{{ page.title }}</h4></div>
+                        </a>
+                    </div>
+                </div>{% endif %}{% endfor %}{% if forloop.last %}
+            </div> <!--/.promo-box-container-->
+        </div> <!--/.promo-box-bg-->
+        {% endif %}{% endfor %}

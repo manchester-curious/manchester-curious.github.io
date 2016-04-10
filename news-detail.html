@@ -1,23 +1,15 @@
 ---
+title: News
+layout: default
+id: news
+promos:
+- get-involved.html
+- event-planner.html
+- programme.html
+banner-style: news
 ---
-<!doctype html>
-<html class="no-js" lang="en">
-   <head>
-      <meta charset="utf-8">
-      <meta http-equiv="x-ua-compatible" content="ie=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>News Detail</title>
-      <link rel="stylesheet" href="css/app.css">
-   {% seo %}
-   </head>
-   <body>
-      {% include header.html %}
-      <div class="heading-banner heading-banner-news ">
-         <div class="content">
-            <h1>News</h1>
-         </div>
-      </div>        
-      <div class="container">
+{% include page-heading.html %}
+        <div class="container">
          <div class="news-detail-container">
             <div class="news-details">
                <img src="http://placehold.it/700x400">
@@ -32,21 +24,9 @@
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam aperiam autem, nesciunt optio nulla qui, fuga praesentium similique aliquid odio fugit beatae explicabo, in sunt laborum at, voluptas laudantium quas? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error nobis at, laborum optio aspernatur</p>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam aperiam autem, nesciunt optio nulla qui, fuga praesentium similique aliquid odio fugit beatae explicabo, in sunt laborum at, voluptas laudantium quas? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error nobis at, laborum optio aspernatur illum</p>                        
          </div>
-      </div> <!--/.container-->
-      <div class="container">
-          <div class="see-all">
-            <a href="news.html" class="button button-expanded">See All News</a>
-          </div>  
-      </div> 
-      <div class="promo-box-bg">
-         <div class="promo-box-container">
-            {% include promo-get-involved.html %}
-            {% include promo-event-planner.html %}
-            {% include promo-programme.html %}
-         </div> <!--/.promo-box-container--> 
-      </div> <!--/.promo-box-bg-->
-       
-      {% include footer.html %}
-      {% include js.html %}
-   </body>
-</html>
+         <div class="container">
+             <div class="see-all">
+               <a href="news.html" class="button button-expanded">See All News</a>
+             </div>
+         </div>
+        </div> <!--/.container-->
