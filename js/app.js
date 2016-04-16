@@ -10,6 +10,9 @@ function getObject(cacheKey, url) {
 		var dfd = $.Deferred();
 		var object = localStorage.getCacheItem(cacheKey);
 		if (object) {
+			if (typeof object != 'object') {
+				object = JSON.parse(object);
+			}
 			return $.when(object);
 		}
 	}
@@ -45,3 +48,14 @@ $(document).ready(function() {
 	getAllEvents();
 });
 
+getAllTours().then(function(tours) {
+         for(i = 0; i < tours.length; i++) {
+            var tour = tours[i];
+            console.log(tour);
+            if (tour.slug == getQueryVariable('tour')) {
+               console.log('found it');
+            } else { 
+            	console.log('not ' + tour.slug);
+            }
+         }
+      });
