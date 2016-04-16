@@ -19,7 +19,7 @@ function getObject(cacheKey, url) {
 		 crossDomain: true
 	})).then(function(data) {
 		if (localStorage) {
-			localStorage.setCacheItem(cacheKey, data, {hours: 1});
+			localStorage.setCacheItem(cacheKey, JSON.parse(data), {hours: 1});
 		}
 		return data;
 	});
