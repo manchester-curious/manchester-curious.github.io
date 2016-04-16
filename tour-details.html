@@ -108,16 +108,9 @@ extra-js:
          }
          console.error('Query variable %s not found', variable);
       }
-
-      var template = Handlebars.compile(document.getElementById("tour-detail-template").innerHTML);
-
-      var r = new XMLHttpRequest();
-      r.open("GET", "http://buildings.manchestercurious.com/wp-json/wp/v2/buildings", true);
-      r.onreadystatechange = function () {
-         if (r.readyState != 4 || r.status != 200) {
-            return;
-         }
-         var tours = JSON.parse(r.responseText)
+      
+      getAllTours().then(function(tours) {
+         var template = Handlebars.compile(document.getElementById("tour-detail-template").innerHTML);
          // Need to adjust this to the the building ID as a parameter and fetch the specific building instead of all of them
          for(i = 0; i < tours.length; i++) {
             var tour = tours[i];
@@ -126,7 +119,5 @@ extra-js:
                return;
             }
          }
-      };
-      r.send("");
-
+      });
    </script>

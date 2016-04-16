@@ -47,17 +47,10 @@ extra-js:
                 </script>
                 {% endraw %}
                 <script type="application/javascript">
-                    var template = Handlebars.compile(document.getElementById('tour-template').innerHTML)
-                    var r = new XMLHttpRequest();
-                    r.open("GET", "http://buildings.manchestercurious.com/wp-json/wp/v2/buildings", true);
-                    r.onreadystatechange = function () {
-                        if (r.readyState != 4 || r.status != 200) {
-                            return;
-                        }
-                        var tours = JSON.parse(r.responseText)
+                    getAllTours().then(function(tours) {
+                        var template = Handlebars.compile(document.getElementById('tour-template').innerHTML)
                         document.getElementById('tours-placeholder').innerHTML = template({'tours': tours});
-                    };
-                    r.send("");
+                    });
                 </script>
             </div>  <!--/.table-container-->
         </div> <!--/.container-->
