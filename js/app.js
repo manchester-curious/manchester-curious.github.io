@@ -47,15 +47,3 @@ $(document).ready(function() {
 	getAllTours();
 	getAllEvents();
 });
-
-getAllTours().then(function(tours) {
-         for(i = 0; i < tours.length; i++) {
-            var tour = tours[i];
-            console.log(tour);
-            if (tour.slug == getQueryVariable('tour')) {
-               console.log('found it');
-            } else { 
-            	console.log('not ' + tour.slug);
-            }
-         }
-      });
