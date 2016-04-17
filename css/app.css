@@ -2513,10 +2513,10 @@ table.tours tr td .tour-type {
   table.tours tr td .tour-mobile {
     display: none; } }
 
-.walking {
+.walkingtour {
   background-image: url("../images/icon-tour-walking.png"); }
 
-.building {
+.buildingtour {
   background-image: url("../images/icon-tour-building.png"); }
 
 .heading-banner-event-planner {

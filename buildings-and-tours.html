@@ -36,7 +36,7 @@ banner-style: news
                             <tr>
                                 <td valign="top"><span>Event:</span> {{ title.rendered }}</td>
                                 <td valign="top"><span>Venue:</span> {{ address }} </td>
-                                <td valign="top"><div class="tour-mobile"><span>Tour type:</span> {{ type }} </div><div class="tour-type {{type}}"></div></td>
+                                <td valign="top"><div class="tour-mobile"><span>Tour type:</span> {{ event_type }} </div><div class="tour-type {{removeWhitespace event_type}}"></div></td>
                                 <td valign="top"><a href="tour-details.html?tour={{slug}}" class="button button-expanded">More</a></td>
                             </tr>
                         {{/each}}
