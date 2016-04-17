@@ -7,7 +7,7 @@ highlighter: rouge
 twitter:
   username: MCRCurious2016
 logo: /images/logo@2x.gif
-exclude: ["vendor", "README.md", "package.json", "gulpfile.js", "bower.json", "CHANGELOG.md", "Gemfile", "script", "scss", "Rakefile"]
+exclude: ["vendor", "README.md", "package.json", "gulpfile.js", "bower.json", "CHANGELOG.md", "Gemfile", "script", "scss", "Rakefile", "bower_components", "node_modules"]
 
 gems:
   - jekyll-sitemap
