@@ -12,8 +12,8 @@ banner-style: news
         <div class="container">
             <div class="tour-type-container">
                 <ul class="tour-icons">
-                  <li><div class="tour-type building"></div><br>Building Tour</li>
-                  <li><div class="tour-type walking"></div><br>Walking Tour</li>
+                  <li><div class="tour-type buildingtour"></div><br>Building Tour</li>
+                  <li><div class="tour-type walkingtour"></div><br>Walking Tour</li>
                 </ul>
             </div>
             <div class="table-container">
@@ -36,7 +36,7 @@ banner-style: news
                             <tr>
                                 <td valign="top"><span>Event:</span> {{ title.rendered }}</td>
                                 <td valign="top"><span>Venue:</span> {{ address }} </td>
-                                <td valign="top"><div class="tour-mobile"><span>Tour type:</span> {{ event_type }} </div><div class="tour-type {{removeWhitespace event_type}}"></div></td>
+                                <td valign="top"><div class="tour-mobile"><span>Tour type:</span> {{ event_type }} </div><div class="tour-type {{toLowercase removeWhitespace event_type}}"></div></td>
                                 <td valign="top"><a href="tour-details.html?tour={{slug}}" class="button button-expanded">More</a></td>
                             </tr>
                         {{/each}}
