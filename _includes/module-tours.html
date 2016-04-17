@@ -1,17 +1,33 @@
-<div class="module-outer">
-    <div class="module-inner" data-equalizer-watch>
-        <div class="image">
-            <a href="tour-details.html">
-                <img src="http://placehold.it/380x220" alt="">
-            </a>  
-        </div>
-        <div class="content">
-            <div class="label">Nearly Sold Out</div>
-            <ul>
-                <li>Building Name</li>
-                <li><a href="tour-details.html">Manchester Modernists' Walking Tour: Building For The New Century: Bombs, Booms And Busts</a></li>
-                <li><small>Walking Tour</small></li>
-            </ul>     
+
+<div id="tours-placeholder">
+    Loading tours…
+</div>
+{% raw %}
+<script id="tour-template" type="text/x-handlebars-template">
+    {{#each tours}}
+    <div class="module-outer">
+        <div class="module-inner" data-equalizer-watch>
+            <div class="image">
+                <a href="tour-details.html">
+                    <img src="http://placehold.it/380x220" alt="">
+                </a>  
+            </div>
+            <div class="content">
+                <div class="label">Nearly Sold Out</div>
+                <ul>
+                    <li><a href="tour-details.html">{{ title.rendered }}</a></li>
+                    <li><small>{{ type }}</small></li>
+                </ul>
+            </div>
         </div>
     </div>
-</div>
+    {{/each}}
+</script>
+{% endraw %}
+<script type="application/javascript">
+    getAllTours().then(function(tours) {
+        var frontPageTours = _.filter(tours, {featured_tour: "1"});
+        var template = Handlebars.compile(document.getElementById('tour-template').innerHTML)
+        document.getElementById('tours-placeholder').innerHTML = template({'tours': frontPageTours});
+    });
+</script>

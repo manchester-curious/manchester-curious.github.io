@@ -7,8 +7,6 @@ promos:
 - event-planner.html
 - programme.html
 banner-style: news
-extra-js:
-- https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js
 ---
 {% include page-heading.html %}
         <div class="container">
@@ -49,7 +47,7 @@ extra-js:
                 <script type="application/javascript">
                     getAllTours().then(function(tours) {
                         var template = Handlebars.compile(document.getElementById('tour-template').innerHTML)
-                        document.getElementById('tours-placeholder').innerHTML = template({'tours': tours});
+                        document.getElementById('tours-placeholder').innerHTML = template({'tours': _.sortBy(tours, function(t) { return t.title.rendered; })});
                     });
                 </script>
             </div>  <!--/.table-container-->
