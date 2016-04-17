@@ -82,7 +82,8 @@ footer {
 	.social-media {
 		@include menu-simple;
 		margin-left: 0;
-		margin-top: rem-calc(20);
+		margin-top: rem-calc(10);
+		float: left;
 
 		li {
 			text-indent:-3333px;
