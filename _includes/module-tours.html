@@ -1,9 +1,9 @@
 
-<div id="tours-placeholder">
+<div id="module-tours-placeholder">
     Loading tours…
 </div>
 {% raw %}
-<script id="tour-template" type="text/x-handlebars-template">
+<script id="module-tour-template" type="text/x-handlebars-template">
     {{#each tours}}
     <div class="module-outer">
         <div class="module-inner" data-equalizer-watch>
@@ -24,10 +24,3 @@
     {{/each}}
 </script>
 {% endraw %}
-<script type="application/javascript">
-    getAllTours().then(function(tours) {
-        var frontPageTours = _.filter(tours, {featured_tour: "1"});
-        var template = Handlebars.compile(document.getElementById('tour-template').innerHTML)
-        document.getElementById('tours-placeholder').innerHTML = template({'tours': frontPageTours});
-    });
-</script>

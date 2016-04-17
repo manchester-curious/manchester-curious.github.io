@@ -85,9 +85,6 @@ final-includes:
                <h2>Recommended Tours</h2>
             </div>
             {% include module-tours.html %}
-            {% include module-tours.html %}
-            {% include module-tours.html %}
-            {% include module-tours.html %}
          </div> <!--/.promo-box-container-->
       </div> <!--/.promo-box-bg-->
    </script>
@@ -118,4 +115,13 @@ final-includes:
             }
          }
       });
+   </script>
+
+   <!-- DO THE RECOMMENDED TOURS -->
+   <script type="application/javascript">
+       getAllTours().then(function(tours) {
+           var frontPageTours = _.filter(tours, {featured_tour: "1"});
+           var template = Handlebars.compile(document.getElementById('module-tour-template').innerHTML)
+           document.getElementById('module-tours-placeholder').innerHTML = template({'tours': frontPageTours});
+       });
    </script>
