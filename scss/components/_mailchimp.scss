@@ -1,0 +1,37 @@
+#mc_embed_signup {
+	float: left;
+	width: 100%;
+}
+#mc_embed_signup .button {
+	background-color: $primary-color !important;
+	border-radius: 0 !important;
+	font-size: rem-calc(13) !important;
+	letter-spacing: 0.0625rem !important;
+	height: 37px !important;
+}
+#mc_embed_signup .button:hover {
+	background-color: darken($primary-color, 10%) !important;
+}
+#mc_embed_signup input.button,
+#mc_embed_signup input.email {
+	width: 100% !important;	
+}
+#mc_embed_signup form {
+	padding: 0 !important;
+}
+#mc_embed_signup input.email,
+#mc_embed_signup input {
+	border-radius: 0 !important;
+}
+
+#mc_embed_signup {
+	background-color: transparent !important;
+
+}
+#mc_embed_signup label {
+	padding-bottom: 0 !important;	
+}
+#mc_embed_signup .mc-field-group input {
+	font-family: $secondary-body-font-family !important;
+	font-size: rem-calc(15) !important;
+}
