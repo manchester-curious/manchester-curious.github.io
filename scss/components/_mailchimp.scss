@@ -22,8 +22,11 @@
 #mc_embed_signup input.email,
 #mc_embed_signup input {
 	border-radius: 0 !important;
+	border-color: #cacaca !important;
 }
-
+#mc_embed_signup input:focus {
+	border-color: $dark-gray !important;
+}
 #mc_embed_signup {
 	background-color: transparent !important;
 
