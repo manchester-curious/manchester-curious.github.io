@@ -79,18 +79,20 @@ final-includes:
       </div> <!--/.container-->
       </div> <!--/.full-width-body-->
    {% endraw %}
-      <div class="promo-box-bg">
-         <div class="promo-box-container">
-            <div class="heading">
-               <h2>Recommended Tours</h2>
-            </div>
-            {% include module-tours.html %}
-         </div> <!--/.promo-box-container-->
-      </div> <!--/.promo-box-bg-->
    </script>
    <div id="tour-details-placeholder">
       loading…
    </div>
+
+   <div class="promo-box-bg">
+      <div class="promo-box-container">
+         <div class="heading">
+            <h2>Recommended Tours</h2>
+         </div>
+         {% include module-tours.html %}
+      </div> <!--/.promo-box-container-->
+   </div> <!--/.promo-box-bg-->
+   
    <script type="application/javascript">
       function getQueryVariable(variable) {
          var query = window.location.search.substring(1);
@@ -122,6 +124,6 @@ final-includes:
        getAllTours().then(function(tours) {
            var frontPageTours = _.filter(tours, {featured_tour: "1"});
            var template = Handlebars.compile(document.getElementById('module-tour-template').innerHTML)
-           document.getElementById('module-tours-placeholder').innerHTML = template({'tours': frontPageTours});
+           document.getElementById('module-tour-placeholder').innerHTML = template({'tours': frontPageTours});
        });
    </script>
