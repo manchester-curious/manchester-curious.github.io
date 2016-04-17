@@ -8,7 +8,7 @@ body#get-involved {
 	display: block;
 
 	@include breakpoint(medium) {
-		@include grid-col(8);
+		@include grid-col(7);
 		display: block;			
 	}
 }
@@ -18,7 +18,7 @@ body#get-involved {
 	
 	@include breakpoint(medium) {
 		@include grid-col(4);
-		@include grid-column-offset(0);					
+		@include grid-column-offset(1);					
 	}
 }
 
