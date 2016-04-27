@@ -19,8 +19,8 @@ final-includes:
                </div>
             </div>
             <div class="text-container">
-               <h1>{{ title.rendered }}</h1>
-               <p class="venue">{{ title.rendered }}</p>
+               <h1>{{{ title.rendered }}}</h1>
+               <p class="venue">{{{ address }}}</p>
             </div>  
          </div>
       </div> <!--/.full-width-header-->  
@@ -30,7 +30,7 @@ final-includes:
             <div class="tour-summary-container">
                <div class="tour-summary">
                   <ul>
-                     <li><strong>Venue: </strong>{{title.rendered}}</li>
+                     <li><strong>Venue: </strong>{{{title.rendered}}}</li>
                      <li><strong>Cost:</strong> &pound;2.50</li>
                      <li><strong>Duration:</strong> {{ toDuration duration }}</li>
                      <li><strong>Tour Type:</strong> {{ type }}</li>
@@ -41,6 +41,9 @@ final-includes:
                      <li><div class="tour-type {{toCssClass event_type}}"></div></li>
                      <li>{{ event_type }}</li>
                   </ul>                  
+               </div>
+               <div>
+                  {{{content.rendered}}}
                </div>
             </div> 
             <!--
@@ -70,10 +73,10 @@ final-includes:
          <div class="more-info-container">
             <div class="map"><img src="http://placehold.it/600?text=map+goes+here" alt=""></div>
             <h2>Address/Meeting Point</h2>
-            <p><strong>{{ meeting_point }}</strong></p>
+            <p><strong>{{{ meeting_point }}}</strong></p>
             <p>Please arrive at the meeting point 15 minutes before the advertised start time. Please bring either a paper or digital copy of your ticket with you. You will not be allowed to join the tour without a ticket.</p>
             <h2>Accessibility and Additional Info</h2>
-            <p>{{ accessibility }}</p>
+            <p>{{{ accessibility }}}</p>
          </div>
       </div> <!--/.container-->
       </div> <!--/.full-width-body-->
