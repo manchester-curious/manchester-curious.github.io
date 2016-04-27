@@ -8,14 +8,14 @@
     <div class="module-outer">
         <div class="module-inner" data-equalizer-watch>
             <div class="image">
-                <a href="tour-details.html?tour={{slug}}" class="tracking" data-evt-cat="standard-link" data-evt-action="tour_details_{{slug}}_img" data-event-value="{{include.location}}">
+                <a href="tour-details.html?tour={{slug}}" class="tracking" data-evt-cat="standard-link" data-evt-action="tour_details_{{slug}}_img" data-event-value="{{page.id}}">
                     <img src="http://placehold.it/380x220" alt="">
                 </a>  
             </div>
             <div class="content">
                 {{#if featured_tour_text}}<div class="label">{{featured_tour_text}}</div>{{/if}}
                 <ul>
-                    <li><a href="tour-details.html?tour={{slug}}" class="tracking" data-evt-cat="standard-link" data-evt-action="tour_details_{{slug}}_txt" data-event-value="{{include.location}}">{{{ title.rendered }}}</a></li>
+                    <li><a href="tour-details.html?tour={{slug}}" class="tracking" data-evt-cat="standard-link" data-evt-action="tour_details_{{slug}}_txt" data-event-value="{{page.id}}">{{{ title.rendered }}}</a></li>
                     <li><small>{{ capitalise event_type }}</small></li>
                 </ul>
             </div>
