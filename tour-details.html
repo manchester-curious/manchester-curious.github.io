@@ -31,8 +31,8 @@ final-includes:
                <div class="tour-summary">
                   <ul>
                      <li><strong>Venue: </strong>{{title.rendered}}</li>
-                     <li><strong>Cost:</strong> &pound;3</li>
-                     <li><strong>Duration:</strong> 1hr</li>
+                     <li><strong>Cost:</strong> &pound;2.50</li>
+                     <li><strong>Duration:</strong> {{ toDuration duration }}</li>
                      <li><strong>Tour Type:</strong> {{ type }}</li>
                   </ul>   
                </div>
@@ -43,6 +43,7 @@ final-includes:
                   </ul>                  
                </div>
             </div> 
+            {% comment %}
             <table>
                <thead>
                   <tr>
@@ -64,17 +65,16 @@ final-includes:
                   </tr>
                </tbody>
             </table>
+            {% endcomment %}
             {{{ content.rendered }}}
          </div> <!--/.booking-container-->
          <div class="more-info-container">
             <div class="map"><img src="http://placehold.it/600?text=map+goes+here" alt=""></div>
             <h2>Address/Meeting Point</h2>
             <p><strong>{{ meeting_point }}</strong></p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam illum perferendis animi odio consequatur adipisci ex repellat debitis, dolorem. Eaque eos veniam, velit dolorum eius nemo ipsam impedit possimus alias?</p>
-            <h2>Accessibility</h2>
+            <p>Please arrive at the meeting point 15 minutes before the advertised start time. Please bring either a paper or digital copy of your ticket with you. You will not be allowed to join the tour without a ticket.</p>
+            <h2>Accessibility and Additional Info</h2>
             <p>{{ accessibility }}</p>
-            <h2>Additional Info</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam illum perferendis animi odio consequatur adipisci ex repellat debitis, dolorem. Eaque eos veniam, velit dolorum eius nemo ipsam impedit possimus alias?</p>
          </div>
       </div> <!--/.container-->
       </div> <!--/.full-width-body-->
@@ -119,7 +119,6 @@ final-includes:
       });
    </script>
 
-   <!-- DO THE RECOMMENDED TOURS -->
    <script type="application/javascript">
        getAllTours().then(function(tours) {
            var frontPageTours = _.filter(tours, {featured_tour: "1"});
