@@ -11,9 +11,9 @@
 	$('a.tracking').click(function() {
 			ga('send', {
 			  hitType: 'event',
-			  eventCategory: $(this).attr('data-evt-cat');,
-			  eventAction: $(this).attr('data-evt-action');,
-			  eventLabel: $(this).attr('data-evt-label');
+			  eventCategory: $(this).attr('data-evt-cat'),
+			  eventAction: $(this).attr('data-evt-action'),
+			  eventLabel: $(this).attr('data-evt-label')
 			});
 			return true;
 		});
