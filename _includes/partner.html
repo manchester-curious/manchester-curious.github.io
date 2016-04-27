@@ -1,11 +1,11 @@
 <div class="media-object">
   <div class="media-object-section">
     <div class="thumbnail">
-      <img width="300" src="images/partners/{{include.imageUrl}}">
+      <img class="width: 300px" src="images/partners/{{include.imageUrl}}">
     </div>
   </div>
   <div class="media-object-section">
-    <h5><a href="{{include.link}}" class="tracking" data-evt-cat="partner-link" data-evt-action="{{include.tracking}}" data-evt-value="{{page.id}}">{{{include.name}}}</a></h5>
-    <p>{{{include.text}}}</p>
+    <h5><a href="{{include.link}}" class="tracking" data-evt-cat="partner-link" data-evt-action="{{include.tracking}}" data-evt-value="{{page.id}}">{{include.name}}</a></h5>
+    <p>{{include.text}}</p>
   </div>
 </div>
