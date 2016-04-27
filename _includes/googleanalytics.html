@@ -7,4 +7,15 @@
   ga('create', 'UA-70133730-1', 'auto');
   ga('send', 'pageview');
 
+  $(document).ready(function() {
+	$('a.tracking').click(function() {
+			ga('send', {
+			  hitType: 'event',
+			  eventCategory: $(this).attr('data-evt-cat');,
+			  eventAction: $(this).attr('data-evt-action');,
+			  eventLabel: $(this).attr('data-evt-label');
+			});
+			return true;
+		});
+	});
 </script>
