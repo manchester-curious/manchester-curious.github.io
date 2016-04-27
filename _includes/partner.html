@@ -1,11 +1,11 @@
 <div class="media-object">
   <div class="media-object-section">
     <div class="thumbnail">
-      <img src="http://placehold.it/350?text=Make+300px+wide">
+      <img width="300px" src="images/partners/{{input.imageUrl}}">
     </div>
   </div>
   <div class="media-object-section">
-    <h5><a href="#">Name Here</a></h5>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure error distinctio repellendus voluptatum fugiat ratione dignissimos, libero harum architecto officiis molestias</p>
+    <h5><a href="{{{input.link}}}" class="tracking" data-evt-cat="partner-link" data-evt-action="{{input.tracking}}" data-evt-value="{{page.id}}">{{{input.name}}}</a></h5>
+    <p>{{{input.text}}}</p>
   </div>
 </div>
