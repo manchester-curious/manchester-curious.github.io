@@ -15,7 +15,7 @@
             <div class="content">
                 {{#if featured_tour_text}}<div class="label">{{featured_tour_text}}</div>{{/if}}
                 <ul>
-                    <li><a href="tour-details.html?tour={{slug}}">{{{ title.rendered }}}</a></li>
+                    <li><a href="tour-details.html?tour={{slug}}" class="tracking" data-evt-category="standard-link" data-evt-action="tour_details" data-event-value="{{include.location}}">{{{ title.rendered }}}</a></li>
                     <li><small>{{ capitalise event_type }}</small></li>
                 </ul>
             </div>

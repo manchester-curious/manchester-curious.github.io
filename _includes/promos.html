@@ -3,7 +3,7 @@
             <div class="promo-box-container">{% endif %}{% for page in site.pages %}{% if page.name == promo %}
                 <div class="promo-box-outer">
                     <div class="promo-box-item promo-{{ page.name | remove:'.html' | slugify }}">
-                        <a href="{{ page.name }}">
+                        <a href="{{ page.name }}" class="tracking" data-evt-category="promo-link" data-evt-action="{{ page.name }}" data-evt-value="{{id}}">
                             <div class="image"></div>
                             <div class="overlay"></div>
                             <div class="content"><h4>{{ page.title }}</h4></div>
