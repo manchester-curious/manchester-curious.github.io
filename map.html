@@ -6,9 +6,14 @@ promos:
    - get-involved.html
    - event-planner.html
    - programme.html
+extra-css:
+    - 'https://api.mapbox.com/mapbox.js/v2.4.0/mapbox.css'
+extra-js:
+    - 'https://api.mapbox.com/mapbox.js/v2.4.0/mapbox.js'
+    - 'js/map.js'
 ---
 {% include page-heading.html %}
         <div class="container">
-         <div class="leftcol">leftcol</div>
-         <div class="rightcol">rightcol</div>
+            <div id='venues-map'></div>
+            <script>initialiseMap('venues-map');</script>
         </div> <!--/.container-->
