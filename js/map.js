@@ -4,6 +4,7 @@ initial_zoom: 12
 function initialiseMap(mapContainerId) {
     L.mapbox.accessToken = '{{site.mapbox_api_key}}';
     var map = L.mapbox.map(mapContainerId, 'mapbox.light', {}).setView([53.479144, -2.244161], {{page.initial_zoom}});
+    L.control.locate().setPosition('bottomleft').addTo(map);
     var rootUrl = window.location.protocol + '//' + window.location.host + '/';
     getAllTours().then(function (tours) {
         var geoJSON = {'type': 'FeatureCollection', 'features': []}
