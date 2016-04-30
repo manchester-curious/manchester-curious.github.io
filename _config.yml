@@ -6,10 +6,12 @@ url: http://www.manchestercurious.com
 highlighter: rouge
 twitter:
   username: MCRCurious2016
+facebook:
+  app_id: 1464193933910020
 logo: /images/logo@2x.gif
 exclude: ["vendor", "README.md", "package.json", "gulpfile.js", "bower.json", "CHANGELOG.md", "Gemfile", "script", "scss", "Rakefile", "bower_components", "node_modules"]
-type: Organisation
-links: 
+seo_type: Organisation
+seo_links: 
   - https://twitter.com/mcrcurious2016
   - https://www.facebook.com/manchestercurious
   - https://www.instagram.com/mcrcurious/
