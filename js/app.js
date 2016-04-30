@@ -46,7 +46,13 @@ function getAllEvents() {
 }
 
 function staticMapUrl(tour, width, height) {
-	return 'https://api.mapbox.com/v4/mapbox.emerald/url-https%3A%2F%2Fmapbox.com%2Fimg%2Frocket.png('+tour.longitude+','+tour.latitude+')/'+tour.longitude+','+tour.latitude+','+tour.zoom+'/'+width+'x'+height+'.png?access_token={{site.mapbox_api_key}}';
+	if (tour.event_type === 'Building Tour') {
+		var tourImage = encodeURIComponent('{{site.url}}images/icon-tour-building-map.png');
+	}
+	else{
+		var tourImage = encodeURIComponent('{{site.url}}images/icon-tour-walking-map.png');
+	}
+	return 'https://api.mapbox.com/v4/mapbox.emerald/url-'+tourImage+'('+tour.longitude+','+tour.latitude+')/'+tour.longitude+','+tour.latitude+','+tour.zoom+'/'+width+'x'+height+'.png?access_token={{site.mapbox_api_key}}';
 }
 
 $(document).ready(function() {
