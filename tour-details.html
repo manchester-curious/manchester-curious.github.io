@@ -13,9 +13,11 @@ final-includes:
          <div class="info-container">
             <div class="slider-container">
                <div class="owl-carousel">
-                  <div class="item"><img src="http://placehold.it/600x347" alt=""></div>
-                  <div class="item"><img src="http://placehold.it/600x347" alt=""></div>
-                  <div class="item"><img src="http://placehold.it/600x347" alt=""></div>
+                  {{#each images}}
+                     <div class="item"><img src="{{this.guid}}" style="width: 600px; height: 347px;" alt=""></div>
+                  {{else}}
+                     <div class="item"><img src="http://placehold.it/600x347" alt=""></div>
+                  {{/each}}
                </div>
             </div>
             <div class="text-container">
