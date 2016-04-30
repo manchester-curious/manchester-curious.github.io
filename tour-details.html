@@ -73,7 +73,7 @@ final-includes:
             -->
          </div> <!--/.booking-container-->
          <div class="more-info-container">
-            <div class="map"><img src="http://placehold.it/600?text=map+goes+here" alt=""></div>
+            <div class="map"><img src="{{{staticMapUrl}}}" alt=""></div>
             <h2>Address/Meeting Point</h2>
             <p><strong>{{{ meeting_point }}}</strong></p>
             <p>Please arrive at the meeting point 15 minutes before the advertised start time. Please bring either a paper or digital copy of your ticket with you. You will not be allowed to join the tour without a ticket.</p>
@@ -118,6 +118,7 @@ final-includes:
          for(i = 0; i < tours.length; i++) {
             var tour = tours[i];
             if (tour.slug === getQueryVariable('tour')) {
+               tour.staticMapUrl=staticMapUrl(tour,'600','600');
                document.getElementById("tour-details-placeholder").innerHTML = template(tour);
                return;
             }

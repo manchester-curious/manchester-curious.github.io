@@ -1,3 +1,5 @@
+---
+---
 $(document).foundation();
 
 var BUILDINGS_CACHE_KEY = 'buildings';
@@ -41,6 +43,10 @@ function getAllEvents() {
 		pageCache.events = getObject(EVENTS_CACHE_KEY, "http://buildings.manchestercurious.com/wp-json/wp/v2/events");
 	}
 	return pageCache.events;
+}
+
+function staticMapUrl(tour, width, height) {
+	return 'https://api.mapbox.com/v4/mapbox.emerald/url-https%3A%2F%2Fmapbox.com%2Fimg%2Frocket.png('+tour.longitude+','+tour.latitude+')/'+tour.longitude+','+tour.latitude+','+tour.zoom+'/'+width+'x'+height+'.png?access_token={{site.mapbox_api_key}}';
 }
 
 $(document).ready(function() {
