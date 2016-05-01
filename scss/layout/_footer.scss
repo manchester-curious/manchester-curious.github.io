@@ -134,6 +134,23 @@ footer {
 	}
 }
 
+.mobile-links {
+	@include row-expanded;
+	background-color: $dark-gray;
 
+	p {
+		text-align: center;
+		margin-top: rem-calc(6);
+		margin-bottom: rem-calc(6);
+		font-size: rem-calc(12);
+		font-family: $secondary-body-font-family;
+		@include letter-transform();
+
+		a {
+			color: $white;
+		}	
+	}
+
+}
 
 
