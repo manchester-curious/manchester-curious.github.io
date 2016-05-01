@@ -1,12 +1,18 @@
 .promo-box-bg {
+	@include breakpoint(small only) {
+		display: none;	
+	}
+
 	border-top: 1px solid $white;
 	@include row-expanded;
 	background-color: $dark-beige;
 	padding: rem-calc(15 0);
+	
 	@include breakpoint(medium) {
 		padding-top: rem-calc(30);
 		padding-bottom: rem-calc(30);		
 	}
+
 	@include breakpoint(large) {
 		padding-top: rem-calc(50);
 		padding-bottom: rem-calc(50);	
