@@ -85,5 +85,11 @@ header {
 	
 }
 
+li.privacy {
+	@include breakpoint(medium up) {
+		display: none !important;
+	}
+}
+
 
 
