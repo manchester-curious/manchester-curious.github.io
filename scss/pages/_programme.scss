@@ -5,19 +5,34 @@
 	@include grid-col();
 	margin-bottom: rem-calc(40);
 
-	table tr {
+	table.programme tr {
 
+
+		td.venue,
+		td.book {
+			@include show-for(medium);
+		}
+		
 		td a.title {
 			color: $medium-gray;
 		}
 		span {
-			font-family: $header-font-family;
-			color: $dark-gray;
+			@include breakpoint(small only) {
+				font-family: $header-font-family;
+				color: $dark-gray;
+			}
+		}
+		span.date {
+			float: right!important;
 
 			@include breakpoint(medium) {
 				display: none;
-
 			}		
+		}
+		span.more {
+			@include breakpoint(small) {
+				display: none;
+			}			
 		}
 	}
 
