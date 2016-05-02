@@ -29,7 +29,7 @@ var jsVendorPaths = [
 ];
 
 gulp.task('sass', function() {
-  return gulp.src('scss/app.scss')
+  return gulp.src('_sass/app.scss')
     .pipe($.sourcemaps.init())
     .pipe($.sass({
       includePaths: sassPaths
@@ -66,5 +66,5 @@ gulp.task('serve', function() {
 });
 
 gulp.task('default', ['sass','serve','foundationJs','cssVendor','jsVendor'], function() {
-  gulp.watch(['scss/**/*.scss'], ['sass']);
+  gulp.watch(['_sass/**/*.scss'], ['sass']);
 });
