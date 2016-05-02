@@ -16,7 +16,7 @@ $buttongroup-spacing: 1px !default;
 
 /// Selector for the buttons inside a button group.
 /// @type String
-$buttongroup-child-selector: '.button' !default;
+$buttongroup-child-selector: ".button" !default;
 
 /// Maximum number of buttons that can be in an even-width button group.
 /// @type Number
@@ -78,7 +78,7 @@ $buttongroup-expand-max: 6 !default;
         &:first-child:nth-last-child(#{$i}) {
           &, &:first-child:nth-last-child(#{$i}) ~ #{$selector} {
             display: inline-block;
-            @if #{$buttongroup-spacing} == '0' {
+            @if unquote('#{$buttongroup-spacing} == "0"') {
               width: #{percentage(1 / $i)};
             } @else {
               width: calc(#{percentage(1 / $i)} - #{$buttongroup-spacing});
@@ -103,13 +103,13 @@ $buttongroup-expand-max: 6 !default;
   #{$selector} {
     @if $global-flexbox {
       flex: 0 0 100%;
-      margin-#{$global-right}: 0; 
+      margin-#{$global-right}: 0;
     }
     @else {
       width: 100%;
       border-#{$global-right}: $buttongroup-spacing solid transparent;
     }
-    
+
     &:not(:last-child) {
       @if $global-flexbox {
         margin-bottom: $buttongroup-spacing;
