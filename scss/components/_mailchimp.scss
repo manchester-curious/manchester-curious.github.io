@@ -39,5 +39,8 @@
 }
 #mc_embed_signup input.email,
 #mc_embed_signup .mc-field-group input {
-	font-size: rem-calc(16) !important;
+	font-size: rem-calc(14) !important;
+}
+#mc_embed_signup .indicates-required {
+	text-align: left !important;
 }
