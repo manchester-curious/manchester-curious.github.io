@@ -5,4 +5,5 @@ group :jekyll_plugins do
   gem "html-proofer"
   gem "jekyll-sitemap"
   gem "jekyll-seo-tag"
+  gem "jekyll-sass-converter"
 end
