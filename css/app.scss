@@ -1,14 +1,17 @@
+---
+---
+
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400|Montserrat|Domine);
 
 @charset 'utf-8';
 
-@import 'base/settings';
-@import 'foundation';
-@import 'motion-ui';
+@import '../scss/base/settings';
+@import '../scss/foundation';
+@import '../scss/motion-ui';
 
 
-@import 'helpers/variables';
-@import 'helpers/mixins';
+@import '../scss/helpers/variables';
+@import '../scss/helpers/mixins';
 
 //@include foundation-everything;
 
@@ -57,24 +60,24 @@
 // @include motion-ui-transitions;
 // @include motion-ui-animations;
 
-@import 'base/typography';
-@import 'pages/all';
-@import 'pages/index';
-@import 'helpers/buttons';
-@import 'components/promo-box';
-@import 'components/module';
-@import 'layout/header';
-@import 'layout/footer-partners';
-@import 'layout/footer';
-@import 'pages/programme';
-@import 'pages/buildings-tours';
-@import 'pages/event-planner';
-@import 'pages/get-involved';
-@import 'pages/news';
-@import 'pages/partners';
-@import 'pages/contact';
-@import 'pages/tour-detail';
-@import 'pages/map';
-@import 'pages/event-planner';
-@import 'pages/about';
-@import 'components/mailchimp';
+@import '../scss/base/typography';
+@import '../scss/pages/all';
+@import '../scss/pages/index';
+@import '../scss/helpers/buttons';
+@import '../scss/components/promo-box';
+@import '../scss/components/module';
+@import '../scss/layout/header';
+@import '../scss/layout/footer-partners';
+@import '../scss/layout/footer';
+@import '../scss/pages/programme';
+@import '../scss/pages/buildings-tours';
+@import '../scss/pages/event-planner';
+@import '../scss/pages/get-involved';
+@import '../scss/pages/news';
+@import '../scss/pages/partners';
+@import '../scss/pages/contact';
+@import '../scss/pages/tour-detail';
+@import '../scss/pages/map';
+@import '../scss/pages/event-planner';
+@import '../scss/pages/about';
+@import '../scss/components/mailchimp';

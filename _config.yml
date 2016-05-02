@@ -11,6 +11,8 @@ facebook:
 logo: /images/logo@2x.gif
 exclude: ["vendor", "README.md", "package.json", "gulpfile.js", "bower.json", "CHANGELOG.md", "Gemfile", "script", "scss", "Rakefile", "bower_components", "node_modules"]
 mapbox_api_key: pk.eyJ1IjoibWFuY2hlc3RlcmN1cmlvdXNtYXAiLCJhIjoiY2lubTZsY2V1MDBiNXcya2wwc3FyNjJsaiJ9.Ra0-KaX_IvxzcTfRMoyBGQ
+sass:
+    sass_dir: scss
 
 social:
   links:
