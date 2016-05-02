@@ -1,0 +1,4 @@
+{% for current-page in site.pages %}{% if current-page.id == include.page-id %}
+{% assign specified-page = current-page %}
+{% include {{include.this-include}} %}
+{% endif %}{% endfor %}
