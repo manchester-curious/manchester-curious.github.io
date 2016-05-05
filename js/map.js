@@ -10,9 +10,9 @@ function initialiseMap(mapContainerId) {
         var geoJSON = {'type': 'FeatureCollection', 'features': []}
         for (var tourIndex = 0; tourIndex < tours.length; tourIndex++) {
             var tour = tours[tourIndex];
-            var tourIcon = '../images/icon-tour-walking-map.png';
+            var tourIcon = 'images/icon-tour-walking-map.png';
             if (tour.event_type === 'Building Tour') {
-                tourIcon = '../images/icon-tour-building-map.png';
+                tourIcon = 'images/icon-tour-building-map.png';
             }
             geoJSON.features.push(
                 {
