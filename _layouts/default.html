@@ -1,13 +1,13 @@
 <!doctype html>
 <html class="no-js" lang="en">
 {% include head.html %}
-{% include js.html %}
 {% include googleanalytics.html %}
 <body id="{{ page.id }}">
 {% include header.html %}
 {{ content }}
 {% include promos.html %}
 {% include footer.html %}
+{% include foundation_js.html %}
 {% for final-include in page.final-includes %}{% include {{ final-include }} %}{% endfor %}
 </body>
 </html>

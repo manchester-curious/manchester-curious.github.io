@@ -6,5 +6,7 @@
     {% for js in page.extra-js %}<script src="{{ js }}"></script>{% endfor %}
     <link rel="stylesheet" href="css/app.css">
     {% seo %}
+
+	{% include js.html %}
     <!-- Git hash: {{ site.github.build_revision }} -->
 </head>
