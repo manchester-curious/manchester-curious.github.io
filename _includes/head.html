@@ -1,12 +1,11 @@
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% seo %}
+    <link rel="stylesheet" href="css/app.css">
     {% for css in page.extra-css %}<link rel="stylesheet" href="{{ css }}">{% endfor %}
     {% for js in page.extra-js %}<script src="{{ js }}"></script>{% endfor %}
-    <link rel="stylesheet" href="css/app.css">
-    {% seo %}
-
 	{% include js.html %}
     <!-- Git hash: {{ site.github.build_revision }} -->
 </head>
