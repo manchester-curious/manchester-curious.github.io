@@ -1,3 +1,5 @@
+---
+---
 var BUILDINGS_CACHE_KEY = 'buildings';
 var EVENTS_CACHE_KEY = 'events';
 var pageCache = {};
