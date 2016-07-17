@@ -50,7 +50,8 @@ echo "Checking out the target branch: ${TARGET_BRANCH}"
 git checkout $TARGET_BRANCH || git checkout --orphan $TARGET_BRANCH
 
 echo "Pulling in the changes from the source: ${REPO} ${SOURCE_BRANCH}"
-git pull --no-edit $REPO $SOURCE_BRANCH
+git fetch $REPO $SOURCE_BRANCH
+git merge --no-edit $SHA
 
 echo "Now that we're all set up, we can push."
 git push $TARGET_REPO $TARGET_BRANCH
