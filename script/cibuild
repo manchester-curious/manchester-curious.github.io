@@ -1,5 +1,51 @@
 #!/usr/bin/env bash
 set -e # halt script on error
 
-bundle exec jekyll build
-#bundle exec htmlproofer ./_site --disable-external
+# Adapted from https://gist.github.com/domenic/ec8b0fc8ab45f39403dd
+
+SOURCE_BRANCH="gh-pages"
+TARGET_BRANCH="master"
+TARGET_REPO=git@github.com:manchester-curious/manchester-curious.github.io.git
+
+function doBuild {
+    bundle exec jekyll build
+    #bundle exec htmlproofer ./_site --disable-external
+}
+
+# Pull requests and commits to other branches shouldn't try to deploy, just build to verify
+if [ "$TRAVIS_PULL_REQUEST" != "false" -o "$TRAVIS_BRANCH" != "$SOURCE_BRANCH" ]; then
+    echo "Skipping deploy, just running a build."
+    doBuild
+    exit 0
+fi
+
+# Save some useful information
+REPO=`git config remote.origin.url`
+SHA=`git rev-parse --verify HEAD`
+
+# Run our compile script
+doBuild
+
+# Clone the target repository
+git clone $TARGET_REPO out
+cd out
+# Grab the target branch
+git checkout $TARGET_BRANCH || git checkout --orphan $TARGET_BRANCH
+# Merge in the changes from the source branch
+git pull $REPO $SOURCE_BRANCH
+# Now let's go have some fun with the cloned repo
+git config user.name "Travis CI"
+git config user.email "$COMMIT_AUTHOR_EMAIL"
+
+# Get the deploy key by using Travis's stored variables to decrypt deploy_key.enc
+ENCRYPTED_KEY_VAR="encrypted_${ENCRYPTION_LABEL}_key"
+ENCRYPTED_IV_VAR="encrypted_${ENCRYPTION_LABEL}_iv"
+ENCRYPTED_KEY=${!ENCRYPTED_KEY_VAR}
+ENCRYPTED_IV=${!ENCRYPTED_IV_VAR}
+openssl aes-256-cbc -K $ENCRYPTED_KEY -iv $ENCRYPTED_IV -in deploy_key.enc -out deploy_key -d
+chmod 600 deploy_key
+eval `ssh-agent -s`
+ssh-add deploy_key
+
+# Now that we're all set up, we can push.
+git push $TARGET_REPO $TARGET_BRANCH
