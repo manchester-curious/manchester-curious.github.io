@@ -99,23 +99,14 @@ final-includes:
    </div> <!--/.promo-box-bg-->
    
    <script type="application/javascript">
-      var buildingId = getQueryVariable('tour');
-      var eventPromise = getEvents(buildingId);
-      
-      getAllTours().then(function(tours) {
-         var template = Handlebars.compile(document.getElementById("tour-detail-template").innerHTML);
-         // Need to adjust this to the the building ID as a parameter and fetch the specific building instead of all of them
-         for(i = 0; i < tours.length; i++) {
-            var tour = tours[i];
-            if (tour.slug === buildingId) {
-               eventPromise.then(function(events) {
-                  tour.events = events;
-                  tour.staticMapUrl=staticMapUrl(tour,'600','600');
-                  document.getElementById("tour-details-placeholder").innerHTML = template(tour);
-                  return;
-               });
-            }
-         }
+      var buildingSlug = getQueryVariable('tour');
+      getTour(buildingSlug).then(function(tour) {
+         tour.staticMapUrl=staticMapUrl(tour,'600','600');
+         getEvents(tour.id).then(function(events) {
+            tour.events = events;
+            document.getElementById("tour-details-placeholder").innerHTML = template(tour);
+            return;
+         });
       });
    </script>
 
