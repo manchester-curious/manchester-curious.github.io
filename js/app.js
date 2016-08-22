@@ -63,8 +63,10 @@ function compareEvents(a, b) {
 
 function getAllEvents() {
 	if (!pageCache.events) {
-		pageCache.events = getObject(EVENTS_CACHE_KEY, "http://buildings.manchestercurious.com/wp-json/wp/v2/events");
-		pageCache.events.sort(compareEvents);
+		pageCache.events = getObject(EVENTS_CACHE_KEY, "http://buildings.manchestercurious.com/wp-json/wp/v2/events").then(function(events) {
+			events.sort(compareEvents);
+			return events;
+		});
 	}
 	return pageCache.events;
 }
