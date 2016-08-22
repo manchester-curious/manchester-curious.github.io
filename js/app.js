@@ -4,6 +4,19 @@ var BUILDINGS_CACHE_KEY = 'buildings';
 var EVENTS_CACHE_KEY = 'events';
 var pageCache = {};
 
+
+function getQueryVariable(variable) {
+	var query = window.location.search.substring(1);
+	var vars = query.split('&');
+	for (var i = 0; i < vars.length; i++) {
+		var pair = vars[i].split('=');
+		if (decodeURIComponent(pair[0]) == variable) {
+			return decodeURIComponent(pair[1]);
+		}
+	}
+	console.error('Query variable %s not found', variable);
+}
+
 function getObject(cacheKey, url) {
 	
 	if (localStorage) {
@@ -36,11 +49,30 @@ function getAllTours() {
 	return pageCache.tours;
 }
 
+function compareEvents(a, b) {
+	if (a.startdate < b.startdate)
+		return -1;
+    if (a.startdate > b.startdate)
+        return 1;
+    if (a.time < b.time)
+		return -1;
+    if (a.time > b.time)
+        return 1;
+    return 0;
+}
+
 function getAllEvents() {
 	if (!pageCache.events) {
 		pageCache.events = getObject(EVENTS_CACHE_KEY, "http://buildings.manchestercurious.com/wp-json/wp/v2/events");
+		pageCache.events.sort(compareEvents);
 	}
 	return pageCache.events;
+}
+
+function getEvents(buildId) {
+	return getAllEvents().then(function(events) {
+		return _.filter(events, ['building', buildId]);
+	};
 }
 
 function staticMapUrl(tour, width, height) {
