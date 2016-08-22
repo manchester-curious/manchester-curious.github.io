@@ -72,7 +72,7 @@ function getAllEvents() {
 function getEvents(buildId) {
 	return getAllEvents().then(function(events) {
 		return _.filter(events, ['building', buildId]);
-	};
+	});
 }
 
 function staticMapUrl(tour, width, height) {
