@@ -33,3 +33,25 @@ Handlebars.registerHelper('toDuration', function(str) {
 
     return minutes + ' minutes';
 });
+
+Handlebars.registerHelper('formatTime', function(str) {
+	var timeParts = str.split(':');
+	if (timeParts.length == 3) {
+		return timeParts[0] + ':' + timeParts[1];
+	}
+	return str;
+});
+
+Handlebars.registerHelper('formatDate', function(str) {
+	var dateParts = str.split('-');
+	if (dateParts.length == 3) {
+		switch(dateParts[2]) {
+			case '06': return 'Thu 6th October';
+			case '07': return 'Fri 7th October';
+			case '08': return 'Sat 8th October';
+			case '09': return 'Sun 9th October';
+			default: return str;
+		}
+	}
+	return str;
+});

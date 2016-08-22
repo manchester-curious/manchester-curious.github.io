@@ -58,8 +58,8 @@ final-includes:
                <tbody>
                   {{#each events}}
                   <tr>
-                     <td valign="top"><span><strong>Date:</strong></span> {{startdate}}</td>
-                     <td valign="top"><span><strong>Start Time:</strong></span> {{time}}</td>
+                     <td valign="top"><span><strong>Date:</strong></span> {{ formatDate startdate }}</td>
+                     <td valign="top"><span><strong>Start Time:</strong></span> {{ formatTime time }}</td>
                      <td><a href="{{book_ticket_url}}" class="button button-expanded">Book</a></td>
                   </tr>
                   {{else}}
@@ -101,7 +101,7 @@ final-includes:
    <script type="application/javascript">
       var buildingSlug = getQueryVariable('tour');
       var template = Handlebars.compile(document.getElementById("tour-detail-template").innerHTML);
-      
+
       getTour(buildingSlug).then(function(tour) {
          tour.staticMapUrl=staticMapUrl(tour,'600','600');
          getEvents(tour.id).then(function(events) {
