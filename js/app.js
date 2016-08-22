@@ -71,9 +71,9 @@ function getAllEvents() {
 	return pageCache.events;
 }
 
-function getEvents(buildId) {
+function getEvents(buildingId) {
 	return getAllEvents().then(function(events) {
-		return _.filter(events, ['building', buildId]);
+		return _.filter(events, ['building', buildingId]);
 	});
 }
 
