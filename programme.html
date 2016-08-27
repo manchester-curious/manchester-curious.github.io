@@ -10,81 +10,53 @@ promos:
 ---
 {% include page-heading.html %}
 
+   <script id="programme-template" type="text/x-handlebars-template">
       <div class="container">
-         <div class="planner-container">
-            <p>Event times will be announced in July 2016</p>
-         </div>
-        </div> 
-
-{% comment %}
-        <div class="container">
+         {{#each eventsByDate}}
          <div class="heading">
-           <h2>6th Oct 2016</h2>
+           <h2>{{formatDate @key}}</h2>
          </div>
          <div class="table-container">
             <table class="programme">
                <thead>
                   <tr>
                      <th width="110">Time</th>
+                     <th width="110">Duration</th>
                      <th width="373">Event</th>
                      <th width="374">Venue</th>
                      <th width="120">&nbsp;</th>
                   </tr>
                </thead>
                <tbody>
+                  {{#each this}}
                   <tr>
-                     <td valign="top"><span>9am-10am</span><span class="date"><small>Thu 6th Oct</small></span></td>
-                     <td valign="top"><a class="title" href="tour-details.html">Northern Quarter And Ancoats Guided Walk With Ken Moth</a><span><br><small><a href="tour-details.html">More Details</a></small></span></td>
-                     <td valign="top" class="venue">Brooks Building, Faculty of Education, Manchester Metropolitan University</td>
-                     <td valign="top" class="book"><a href="#" class="button button-expanded">Book</a></td>
-                  </tr>
-                  <tr>
-                     <td valign="top"><span>9am-10am</span><span class="date"><small>Thu 6th Oct</small></span></td>
-                     <td valign="top"><a class="title" href="tour-details.html">Northern Quarter And Ancoats Guided Walk With Ken Moth</a><br><small><a href="tour-details.html">More Details</a></small></td>
-                     <td valign="top" class="venue">Brooks Building, Faculty of Education, Manchester Metropolitan University</td>
-                     <td valign="top" class="book"><a href="#" class="button button-expanded">Book</a></td>
-                  </tr>
-                  <tr>
-                     <td valign="top"><span>9am-10am</span><span class="date"><small>Thu 6th Oct</small></span></td>
-                     <td valign="top"><a class="title" href="tour-details.html">Northern Quarter And Ancoats Guided Walk With Ken Moth</a><span><br><small><a href="tour-details.html">More Details</a></small></span></td>
-                     <td valign="top" class="venue">Brooks Building, Faculty of Education, Manchester Metropolitan University</td>
-                     <td valign="top" class="book"><a href="#" class="button button-expanded">Book</a></td>
-                  </tr>                                  
+                     <td valign="top"><span>{{formatTime time}}</span><span class="date"><small>{{formatDate starttime}}</small></span></td>
+                     <td valign="top">{{ toDuration tour.duration }}</td>
+                     <td valign="top"><a class="title" href="tour-details.html?tour={{tour.slug}}">{{{tour.title.rendered}}}</a><span><br><small><a href="tour-details.html?tour={{tour.slug}}">More Details</a></small></span></td>
+                     <td valign="top" class="venue">{{{ tour.address }}}</td>
+                     <td valign="top" class="book"><a href="{{book_ticket_url}}" class="button button-expanded">Book</a></td>
+                  </tr> 
+                  {{/each}}                            
                </tbody>
             </table>
          </div>  <!--/.table-container-->
+         {{/each}}
       </div> <!--/.container-->
-      
+   </script>
+   <div id="programme-placeholder">
+      loading…
+   </div>
+   <script type="application/javascript">
+      var template = Handlebars.compile(document.getElementById("programme-template").innerHTML);
 
-       <div class="container">
-         <div class="heading">
-           <h2>7th Oct 2016</h2>
-         </div>
-         <div class="table-container">
-            <table class="programme">
-               <thead>
-                  <tr>
-                     <th width="110">Time</th>
-                     <th width="373">Event</th>
-                     <th width="374">Venue</th>
-                     <th width="120">&nbsp;</th>
-                  </tr>
-               </thead>
-               <tbody>
-                  <tr>
-                     <td valign="top"><span>9am-10am</span><span class="date"><small>Thu 6th Oct</small></span></td>
-                     <td valign="top"><a class="title" href="tour-details.html">Northern Quarter And Ancoats Guided Walk With Ken Moth</a><span><br><small><a href="tour-details.html">More Details</a></small></span></td>
-                     <td valign="top" class="venue">Brooks Building, Faculty of Education, Manchester Metropolitan University</td>
-                     <td valign="top" class="book"><a href="#" class="button button-expanded">Book</a></td>
-                  </tr>
-                  <tr>
-                     <td valign="top"><span>9am-10am</span><span class="date"><small>Thu 6th Oct</small></span></td>
-                     <td valign="top"><a class="title" href="tour-details.html">Northern Quarter And Ancoats Guided Walk With Ken Moth</a><br><small><a href="tour-details.html">More Details</a></small></td>
-                     <td valign="top" class="venue">Brooks Building, Faculty of Education, Manchester Metropolitan University</td>
-                     <td valign="top" class="book"><a href="#" class="button button-expanded">Book</a></td>
-                  </tr>
-               </tbody>
-            </table>
-         </div>  <!--/.table-container-->
-       </div> <!--/.container-->
-{% endcomment %}
+      getAllTours().then(function(tours) {
+         var toursById = _.groupBy(tours, 'id');
+         getAllEvents().then(function(events) {
+            _.forEach(events, function(event) {
+               event.tour = toursById[event.building];
+            });
+            var eventsByDate = _.groupBy(events, 'startdate');
+            document.getElementById("programme-placeholder").innerHTML = template({eventsByDate: eventsByDate});
+         });
+      });
+   </script>
