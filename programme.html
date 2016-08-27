@@ -31,7 +31,7 @@ promos:
                <tbody>
                   {{#each events}}
                   <tr>
-                     <td valign="top"><span>{{formatTime time}}</span><span class="date"><small>{{formatDate starttime}}</small></span></td>
+                     <td valign="top"><span>{{formatTime time}}</span><span class="date"><small>{{formatDate startdate}}</small></span></td>
                      <td valign="top">{{ toDuration tour.duration }}</td>
                      <td valign="top"><a class="title" href="tour-details.html?tour={{tour.slug}}">{{{tour.title.rendered}}}</a><span><br><small><a href="tour-details.html?tour={{tour.slug}}">More Details</a></small></span></td>
                      <td valign="top" class="venue">{{{ tour.address }}}</td>
