@@ -14,7 +14,7 @@ promos:
       <div class="container">
          {{#each eventsByDate}}
          <div class="heading">
-           <h2>{{formatDate @key}}</h2>
+           <h2>{{ formatDate @key }}</h2>
          </div>
          <div class="table-container">
             <table class="programme">
@@ -56,6 +56,7 @@ promos:
                event.tour = toursById[event.building];
             });
             var eventsByDate = _.groupBy(events, 'startdate');
+            console.log(eventsByDate);
             document.getElementById("programme-placeholder").innerHTML = template({eventsByDate: eventsByDate});
          });
       });
