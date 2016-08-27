@@ -14,7 +14,7 @@ promos:
       <div class="container">
          {{#each eventsByDate}}
          <div class="heading">
-           <h2>{{ formatDate @key }}</h2>
+           <h2>{{ formatDate day }}</h2>
          </div>
          <div class="table-container">
             <table class="programme">
@@ -28,7 +28,7 @@ promos:
                   </tr>
                </thead>
                <tbody>
-                  {{#each this}}
+                  {{#each events}}
                   <tr>
                      <td valign="top"><span>{{formatTime time}}</span><span class="date"><small>{{formatDate starttime}}</small></span></td>
                      <td valign="top">{{ toDuration tour.duration }}</td>
@@ -58,8 +58,15 @@ promos:
                });
             });
             var eventsByDate = _.groupBy(events, 'startdate');
-            console.log({eventsByDate: eventsByDate});
-            document.getElementById("programme-placeholder").innerHTML = template({eventsByDate: eventsByDate});
+            var days = [];
+            _.forEach(eventsByDate, function(events, day) {
+               days.push({
+                  day: day,
+                  events: events
+               });
+            });
+            console.log({eventsByDate: days});
+            document.getElementById("programme-placeholder").innerHTML = template({eventsByDate: days});
          });
       });
    </script>
