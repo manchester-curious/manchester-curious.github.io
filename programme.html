@@ -11,6 +11,7 @@ promos:
 {% include page-heading.html %}
 
    <script id="programme-template" type="text/x-handlebars-template">
+   {% raw %}
       <div class="container">
          {{#each eventsByDate}}
          <div class="heading">
@@ -42,6 +43,7 @@ promos:
          </div>  <!--/.table-container-->
          {{/each}}
       </div> <!--/.container-->
+   {% endraw %}
    </script>
    <div id="programme-placeholder">
       loading…
