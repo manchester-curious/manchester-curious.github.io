@@ -53,10 +53,12 @@ promos:
          var toursById = _.groupBy(tours, 'id');
          getAllEvents().then(function(events) {
             _.forEach(events, function(event) {
-               event.tour = toursById[event.building];
+               _.forEach(toursById[event.building], function(matchingTour) {
+                  event.tour = matchingTour;
+               });
             });
             var eventsByDate = _.groupBy(events, 'startdate');
-            console.log(eventsByDate);
+            console.log({eventsByDate: eventsByDate});
             document.getElementById("programme-placeholder").innerHTML = template({eventsByDate: eventsByDate});
          });
       });
