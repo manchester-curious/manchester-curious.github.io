@@ -84,6 +84,13 @@ function getTour(slug) {
 	});
 }
 
+function getTourById(buildingId) {
+	return getAllTours().then(function(buildings) {
+		var tours = _.filter(buildings, ['id', buildingId]);
+		return tours[0];
+	});
+}
+
 function staticMapUrl(tour, width, height) {
 	if (tour.event_type === 'Building Tour') {
 		var tourImage = encodeURIComponent('{{site.url}}images/icon-tour-building-map.png');
