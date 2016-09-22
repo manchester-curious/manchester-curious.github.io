@@ -46,10 +46,12 @@ Handlebars.registerHelper('formatDate', function(str) {
 	var dateParts = str.split('-');
 	if (dateParts.length == 3) {
 		switch(dateParts[2]) {
-			case '06': return 'Thu 6th October';
-			case '07': return 'Fri 7th October';
-			case '08': return 'Sat 8th October';
-			case '09': return 'Sun 9th October';
+			case '04': return 'Thu 4th May';
+			case '05': return 'Fri 5th May';
+			case '06': return 'Sat 6th May';
+			case '07': return 'Sun 7th May';
+			case '08': return 'Mon 8th May';
+			case '09': return 'Tue 9th May';
 			default: return str;
 		}
 	}
